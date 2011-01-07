@@ -19,7 +19,7 @@ LIBTOOL_VERSION_FLAG = 	-release $(VERSION)
 
 # Compiler Settings
 SED_SUBSTITUTION = 		sed s/__WDB_VERSION__/$(VERSION)/g $<\
-						| sed s�__WDB_LIB_PATH__�"$(LD_LIBRARY_PATH)"�g \
+						| sed s:__WDB_LIB_PATH__:"$(LD_LIBRARY_PATH)":g \
 						| sed s:__WDB_LOGDIR__:@abs_builddir@/var/logs:g \
 						| sed s:__WDB_BUILDDIR__:@abs_builddir@:g \
 						| sed s:__WDB_SRCDIR__:@srcdir@:g \
@@ -38,8 +38,6 @@ SED_SUBSTITUTION = 		sed s/__WDB_VERSION__/$(VERSION)/g $<\
 						| sed s:__WCI_SCHEMA__:wci_int:g \
 						| sed s:__WCI_LIB__:wdb.so:g \
 						| sed s:__WDB_SRID__:$(DEFAULT_SRID):g \
-						| sed s:__SCHEMA_VERSION__:$(SCHEMA_VERSION):g \
-						| sed s:__OLD_VERSION__:$(OLD_MAJOR_VERSION).$(OLD_MINOR_VERSION).$(OLD_MICRO_VERSION):g \
 						| sed s:__WDB_DISTDIR__:$(PACKAGE)-$(VERSION):g \
 			 			> $@
 

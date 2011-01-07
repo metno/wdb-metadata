@@ -55,7 +55,7 @@ WDB_DATABASE_INSTALL
 #-----------------------------------------------------------------------------
 
 # Create PkgConfig File
-# AC_CREATE_GENERIC_CONFIG
+AC_CREATE_GENERIC_CONFIG
 
 
 #-----------------------------------------------------------------------------

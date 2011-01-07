@@ -23,6 +23,9 @@
 -- This package contains the metadata information that is specific to
 -- met.no.
 
+-- Spatial References
+\i __WDB_DATADIR__/sql/wdb_spatial_ref_sys.sql
+
 -- Party (Organizations and People)
 \i __WDB_DATADIR__/sql/wdb_party.sql
 
