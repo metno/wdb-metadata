@@ -18,7 +18,7 @@ AM_LDFLAGS =			-L@builddir@
 LIBTOOL_VERSION_FLAG = 	-release $(VERSION)
 
 # Compiler Settings
-SED_SUBSTITUTION = 		sed s/__WDB_VERSION__/$(VERSION)/g $<\
+SED_SUBSTITUTION = 		sed s:__WDB_VERSION__:$(VERSION):g $<\
 						| sed s:__WDB_LIB_PATH__:"$(LD_LIBRARY_PATH)":g \
 						| sed s:__WDB_LOGDIR__:@abs_builddir@/var/logs:g \
 						| sed s:__WDB_BUILDDIR__:@abs_builddir@:g \
@@ -98,7 +98,7 @@ EXTRA_PROGRAMS = 		$(installchecks)
 CLEANFILES =
 DISTCLEANFILES = 
 MOSTLYCLEANFILES =
-dist_bin_SCRIPTS =		wdb-config
+dist_bin_SCRIPTS =		metno-metadata-config
 dist_sysconf_DATA =
 noinst_PROGRAMS =
 noinst_SCRIPTS =		
@@ -114,20 +114,17 @@ STABILITYTESTS =
 # Share directory organization
 wdbdatadir = 			$(datadir)/wdb
 wdbdata_DATA =
-sqldir = 				$(wdbdatadir)/sql
+sqldir = 				$(wdbdatadir)/metno-metadata
 sql_DATA =
-
-# Include directory organization
-pkgincludedir = $(includedir)/wdb
 
 
 #-----------------------------------------------------------------------------
 # WDB Configuration
 #-----------------------------------------------------------------------------
 
-nodist_bin_SCRIPTS = 	wdb-config
+nodist_bin_SCRIPTS = 	
 
-DISTCLEANFILES +=		wdb-config
+DISTCLEANFILES +=		metno-metadata-config
 
 include etc/metadata.mk
 
@@ -143,50 +140,33 @@ clean-local:
 	$(DOCCLEAN_HOOK)
 	rm -rf @builddir@/var/
 	rm -f core.*
-# Should not remove cores - hack for v0.3
-
-# The dbclean target is used by Buildbot to clean-up after a failed distcheck.
-dbclean:
-	dropdb wdb_distcheck
-#	@builddir@/install/uninstall_database -d wdb_distcheck
 
 
 #-----------------------------------------------------------------------------
 # Install Hooks
 #-----------------------------------------------------------------------------
 
-install-database:
+install-metadata:
 	mkdir -p @builddir@/var/logs/
 	rm -f @builddir@/var/logs/*
-	@builddir@/install/install_database -d $(DATABASE_NAME)
-
-uninstall-database: install/uninstall_database
-	@builddir@/install/uninstall_database
+	@builddir@/install/install_metadata -d $(DATABASE_NAME)
 
 # We cannot install the database unless we have installed the binaries in 
 # @prefix@, therefore we ommit database installation if DESTDIR has been set.
 install-data-hook:  
 	@if [[ $(DO_INSTALL_DATABASE) = "true" && ! "$(DESTDIR)" ]]; then \
-		$(MAKE) install-database; \
+		$(MAKE) install-metadata; \
 	else \
 		echo "-------------------------------------------------------------------------------"; \
-		echo "Run <$(MAKE) install-database> to create the database"; \
+		echo "Run <$(MAKE) install-metadata> to install the metadata"; \
 		echo "-------------------------------------------------------------------------------"; \
 	fi
 
-uninstall-local:
-	@if [[ $(DO_INSTALL_DATABASE) = "true" && ! "$(DESTDIR)" ]]; then \
-		$(MAKE) uninstall-database; \
-	else \
-		echo "-------------------------------------------------------------------------------"; \
-		echo "Run <$(MAKE) uninstall-database> to drop the database and its users"; \
-		echo "-------------------------------------------------------------------------------"; \
-	fi
 
 DISTCHECK_DATABASE_NAME = wdb_distcheck
 DISTCHECK_CONFIGURE_FLAGS = --enable-database-install --with-database-name=$(DISTCHECK_DATABASE_NAME)
 
-override distuninstallcheck_listfiles =  find . -type f -! -name wdb.conf -print
+override distuninstallcheck_listfiles =  find . -type f -! -name metno-metadata.conf -print
 
 distcheck-hook:
 	mkdir $(distdir)/_inst/etc/
@@ -207,5 +187,9 @@ update-makefiles:
 			exit 1 ; \
 	done
 
+#-----------------------------------------------------------------------------
+# Debian Makefile
+#-----------------------------------------------------------------------------
 
+include mk/debian.mk
 	

@@ -2,8 +2,9 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # 
 # wdb - weather and water data storage
+# metno-metadata
 #
-# Copyright (C) 2007-2010 met.no
+# Copyright (C) 2011 met.no
 #
 #  Contact information:
 #  Norwegian Meteorological Institute
@@ -18,7 +19,7 @@
 #  (at your option) any later version.
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# install - install the wdb database
+# install - install the metno-metadata
 
 version_number=__SCHEMA_VERSION__
 

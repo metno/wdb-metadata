@@ -8,7 +8,7 @@
 #-----------------------------------------------------------------------------
 
 AC_PREREQ(2.59)
-AC_INIT(wdb, 0.9.8, [wdb@met.no])
+AC_INIT(metno-metadata, 0.9.8, [wdb@met.no])
 
 # Config
 # AC_CONFIG_SRCDIR([config.h.in])
@@ -16,7 +16,7 @@ AC_INIT(wdb, 0.9.8, [wdb@met.no])
 AC_CONFIG_MACRO_DIR([m4])
 
 #-----------------------------------------------------------------------------
-# Programs
+# Programske i
 #-----------------------------------------------------------------------------
 
 AC_PROG_INSTALL

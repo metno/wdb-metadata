@@ -11,9 +11,7 @@ EXTRA_DIST +=			$(INSTALL_SOURCES) \
 						install/Makefile.am \
 						install/Makefile.in
 
-CLEANFILES += 			$(INSTALL_SOURCES:.in.sh=) \
-						$(NOINSTALL_SOURCES:.in.sh=)
-
+CLEANFILES += 			$(INSTALL_SOURCES:.in.sh=)
 DISTCLEANFILES +=		install/Makefile
 
 
