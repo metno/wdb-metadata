@@ -3,20 +3,17 @@ Section: devel
 Priority: extra
 Maintainer: Michael Akinde <michael.akinde@met.no>
 Build-Depends: debhelper (>= 5), debconf, dbconfig-common, po-debconf,
-  devscripts,
-  pkg-config (>=0.22),
-  autotools-dev,  autoconf (>=2.61), automake,
-  xmlto,  
-  postgresql-8.3-postgis, postgresql-server-dev-8.3,
+  devscripts, autotools-dev,  autoconf (>=2.61), automake,
+  xmlto
 Standards-Version: 3.7.3
 
 Package: metno-wdb-metadata
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, python (>=2.4),
- postgresql-8.3, postgresql-8.3-postgis, adduser, 
+ postgresql-8.3, postgresql-8.3-postgis, adduser, wdb, 
  dbconfig-common
 Recommends: postgresql-client
-Description: metno-wdb-metadata is metadata package for the WDB
- database. The purpose of this package is to ensure that the 
+Description: This is the official met.no metadata package for the 
+ WDB database. The purpose of this package is to ensure that the 
  database contains all relevant metadata for the loading and
  retrieval of all utilized met.no weather and water data.

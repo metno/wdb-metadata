@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script for wdb
+# postinst script for metno-wdb-metadata
 #
 # see: dh_installdeb(1)
 
