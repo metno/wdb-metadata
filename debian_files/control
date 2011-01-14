@@ -16,4 +16,6 @@ Recommends: postgresql-client
 Description: This is the official met.no metadata package for the 
  WDB database. The purpose of this package is to ensure that the 
  database contains all relevant metadata for the loading and
- retrieval of all utilized met.no weather and water data.
+ retrieval of all utilized met.no weather and water data. Note that
+ metadata changes installed using this package cannot be rolled back
+ (remove and purge have no effect).
