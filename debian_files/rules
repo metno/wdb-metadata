@@ -45,7 +45,7 @@ build-stamp:  config.status
 	dh_testdir
 
 	$(MAKE)
-	#docbook-to-man debian/wdb.sgml > wdb.1
+	#docbook-to-man debian/metno-wdb-metadata.sgml > wdb.1
 
 	touch $@
 
@@ -73,12 +73,12 @@ install: build
 	dh_testroot
 	dh_clean -k 
 	dh_installdirs
-	$(MAKE) DESTDIR=$(CURDIR)/debian/wdb install
+	$(MAKE) DESTDIR=$(CURDIR)/debian/metno-wdb-metadata install
 
 	for TASK in install upgrade; do \
-		mkdir -p $(CURDIR)/debian/wdb/usr/share/dbconfig-common/scripts/wdb/$$TASK; \
-		/bin/echo -e "#!/bin/sh\nsu postgres -c /usr/lib/wdb/$${TASK}_database" > $(CURDIR)/debian/wdb/usr/share/dbconfig-common/scripts/wdb/$$TASK/pgsql; \
-		chmod 700 $(CURDIR)/debian/wdb/usr/share/dbconfig-common/scripts/wdb/$$TASK/pgsql; \
+		mkdir -p $(CURDIR)/debian/metno-wdb-metadata/usr/share/dbconfig-common/scripts/wdb/$$TASK; \
+		/bin/echo -e "#!/bin/sh\nsu postgres -c /usr/lib/wdb/$${TASK}_database" > $(CURDIR)/debian/metno-wdb-metadata/usr/share/dbconfig-common/scripts/wdb/$$TASK/pgsql; \
+		chmod 700 $(CURDIR)/debian/metno-wdb-metadata/usr/share/dbconfig-common/scripts/wdb/$$TASK/pgsql; \
 	done
 
 
