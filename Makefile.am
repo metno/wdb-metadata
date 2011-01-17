@@ -40,7 +40,7 @@ SED_SUBSTITUTION = 		sed s:__WDB_VERSION__:$(VERSION):g $<\
 #						| sed s:__WDB_SCHEMA__:wdb_int:g \
 #						| sed s:__WCI_SCHEMA__:wci_int:g \
 #						| sed s:__WCI_LIB__:wdb.so:g \
-#							| sed s:__WDB_SRID__:$(DEFAULT_SRID):g \
+#						| sed s:__WDB_SRID__:$(DEFAULT_SRID):g \
 #
 
 CRON_COMPILE =			$(SED_SUBSTITUTION);\
