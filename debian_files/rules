@@ -35,8 +35,7 @@ config.status: configure
 	./configure $(confflags) \
 	--prefix=/usr --sysconfdir=/etc \
 	--mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info \
-	CFLAGS="$(CFLAGS)" \
-	--disable-database-install
+	CFLAGS="$(CFLAGS)"
 
 
 build: build-stamp
@@ -72,15 +71,14 @@ install: build
 	dh_testroot
 	dh_clean -k 
 	dh_installdirs
+
 	$(MAKE) DESTDIR=$(CURDIR)/debian/metno-wdb-metadata install
 
 	for TASK in install upgrade; do \
-		mkdir -p $(CURDIR)/debian/metno-wdb-metadata/usr/share/dbconfig-common/scripts/metno-wdb-metadata/$$TASK; \
-		/bin/echo -e "#!/bin/sh\nsu postgres -c /usr/lib/metno-wdb-metadata/$${TASK}_database" > $(CURDIR)/debian/metno-wdb-metadata/usr/share/dbconfig-common/scripts/metno-wdb-metadata/$$TASK/pgsql; \
+		mkdir -p $(CURDIR)/debian/wdb/usr/share/dbconfig-common/scripts/metno-wdb-metadata/$$TASK; \
+		/bin/echo -e "#!/bin/sh\nsu postgres -c /usr/lib/metno-wdb-metadata/$${TASK}_metadata" > $(CURDIR)/debian/metno-wdb-metadata/usr/share/dbconfig-common/scripts/metno-wdb-metadata/$$TASK/pgsql; \
 		chmod 700 $(CURDIR)/debian/metno-wdb-metadata/usr/share/dbconfig-common/scripts/metno-wdb-metadata/$$TASK/pgsql; \
 	done
-
-
 
 
 
