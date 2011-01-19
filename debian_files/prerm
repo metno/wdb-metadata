@@ -21,7 +21,7 @@ set -e
 
 . /usr/share/debconf/confmodule
 . /usr/share/dbconfig-common/dpkg/prerm.pgsql
-dbc_go wdb $@
+#dbc_go wdb $@
 
 case "$1" in
     remove)
