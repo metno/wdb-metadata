@@ -72,7 +72,6 @@ install: build
 	dh_installdirs
 
 	$(MAKE) DESTDIR=$(CURDIR)/debian/metno-wdb-metadata install
-
 	for TASK in install upgrade; do \
 		mkdir -p $(CURDIR)/debian/metno-wdb-metadata/usr/share/dbconfig-common/scripts/metno-wdb-metadata/$$TASK; \
 		/bin/echo -e "#!/bin/sh\nsu postgres -c /usr/lib/metno-wdb-metadata/$${TASK}_metadata" > $(CURDIR)/debian/metno-wdb-metadata/usr/share/dbconfig-common/scripts/metno-wdb-metadata/$$TASK/pgsql; \

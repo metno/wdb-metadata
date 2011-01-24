@@ -2,8 +2,9 @@ Source: metno-wdb-metadata
 Section: devel
 Priority: extra
 Maintainer: Michael Akinde <michael.akinde@met.no>
-Build-Depends: debhelper (>= 5), debconf, devscripts, 
-  autotools-dev,  autoconf (>=2.61), automake, xmlto
+Build-Depends: debhelper (>= 5), debconf, devscripts,
+  dbconfig-common, autotools-dev,  autoconf (>=2.61), 
+  automake, xmlto
 Standards-Version: 3.9.1
 
 Package: metno-wdb-metadata
