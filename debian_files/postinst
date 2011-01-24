@@ -18,8 +18,8 @@ set -e
 # the debian-policy package
 
 . /usr/share/debconf/confmodule
-. /usr/share/dbconfig-common/dpkg/postinst.pgsql
-dbc_go metno-wdb-metadata $@
+# Install Metadata Script
+su postgres -c /usr/lib/metno-wdb-metadata/install_metadata
 
 case "$1" in
     configure)

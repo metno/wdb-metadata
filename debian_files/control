@@ -3,7 +3,7 @@ Section: devel
 Priority: extra
 Maintainer: Michael Akinde <michael.akinde@met.no>
 Build-Depends: debhelper (>= 5), debconf, devscripts,
-  dbconfig-common, autotools-dev,  autoconf (>=2.61), 
+  autotools-dev,  autoconf (>=2.61), 
   automake, xmlto
 Standards-Version: 3.9.1
 
