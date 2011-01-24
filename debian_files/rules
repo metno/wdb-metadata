@@ -20,8 +20,6 @@ else
   confflags += --build $(DEB_BUILD_GNU_TYPE) --host $(DEB_HOST_GNU_TYPE)
 endif
 
-
-
 CFLAGS = -Wall -g
 
 ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
@@ -35,7 +33,8 @@ config.status: configure
 	./configure $(confflags) \
 	--prefix=/usr --sysconfdir=/etc \
 	--mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info \
-	CFLAGS="$(CFLAGS)"
+	CFLAGS="$(CFLAGS)" \
+	--disable-database-install
 
 
 build: build-stamp

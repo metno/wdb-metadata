@@ -17,7 +17,7 @@ AC_SUBST( [MIN_SCHEMA_VERSION],["0"] )
 AC_CONFIG_MACRO_DIR([m4])
 
 #-----------------------------------------------------------------------------
-# Programske i
+# Programs
 #-----------------------------------------------------------------------------
 
 AC_PROG_INSTALL
@@ -48,15 +48,6 @@ AC_DEFINE(DEFAULT_PROJECTION,["+proj=longlat +ellps=WGS84 +no_defs"],[The defaul
 # Set Database Install
 WDB_DATABASE_NAME
 WDB_DATABASE_INSTALL
-
-
-
-#-----------------------------------------------------------------------------
-# Create Config File
-#-----------------------------------------------------------------------------
-
-# Create PkgConfig File
-AC_CREATE_GENERIC_CONFIG
 
 
 #-----------------------------------------------------------------------------
