@@ -19,7 +19,7 @@ set -e
 
 . /usr/share/debconf/confmodule
 . /usr/share/dbconfig-common/dpkg/postinst.pgsql
-dbc_go wdb $@
+dbc_go metno-wdb-metadata $@
 
 case "$1" in
     configure)
