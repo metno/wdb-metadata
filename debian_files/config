@@ -8,8 +8,8 @@ db_version 2.0
 
 if [ -f /usr/share/dbconfig-common/dpkg/config.pgsql ]; then
    . /usr/share/dbconfig-common/dpkg/config.pgsql 
-   dbc_go metno-wdb-metadata $@
+   #dbc_go metno-wdb-metadata $@
 
-	db_set metno-wdb-metadata/user_account "$dbc_dbuser"
-    db_set metno-wdb-metadata/database_name "$dbc_dbname"
+	#db_set metno-wdb-metadata/user_account "w"
+    #db_set metno-wdb-metadata/database_name "$dbc_dbname"
 fi
