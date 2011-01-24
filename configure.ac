@@ -8,7 +8,7 @@
 #-----------------------------------------------------------------------------
 
 AC_PREREQ(2.59)
-AC_INIT(metno-metadata, 0.9.8, [wdb@met.no])
+AC_INIT(metno-wdb-metadata, 0.9.8, [wdb@met.no])
 AC_SUBST( [MIN_SCHEMA_VERSION],["0"] )
 
 # Config
