@@ -146,7 +146,7 @@ fi
 echo "---- metno wdb metadata installation ----"
 
 # Directory for logging
-export LOGDIR=/tmp/$USER/wdb/var/logs/
+export LOGDIR=/tmp/$USER/metno-wdb-metadata/var/logs/
 mkdir -p $LOGDIR
 
 # installation information
@@ -158,16 +158,16 @@ echo -n "installing database on database port... "
 echo $WDB_INSTALL_PORT
 
 # checking if we can find the sql source files
-echo -n "checking for the presence of wdb database files... "
+echo -n "checking for the presence of metno-wdb-metadata files... "
 WDB_DATAMODEL_PATH=__WDB_DATADIR__/sql
 WDB_METADATA_PATH=$WDB_DATAMODEL_PATH
 WDB_CLEANUP_PATH=$WDB_DATAMODEL_PATH
-if test ! -f $WDB_DATAMODEL_PATH/wdbSchemaDefinitions.sql; then
+if test ! -f $WDB_DATAMODEL_PATH/wdbMetadata.sql; then
 	echo "not found"
-    echo "Error: Could not locate database installation files."
+    echo "Error: Could not locate metadata installation files."
 	echo "Checking: $WDB_DATAMODEL_PATH"
-	echo "Unable to install wdb."
-    echo "Error: Could not locate database installation files. Unable to install wdb."
+	echo "Unable to install metno-wdb-metadata."
+    echo "Error: Could not locate metadata installation files. Unable to install wdb."
     exit 1
 fi
 echo "found"

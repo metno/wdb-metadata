@@ -24,13 +24,14 @@ SED_SUBSTITUTION = 		sed s:__WDB_VERSION__:$(VERSION):g $<\
 						| sed s:__WDB_SRCDIR__:@srcdir@:g \
 			 			| sed s:__WDB_BINDIR__:@bindir@:g \
 			 			| sed s:__WDB_LIBDIR__:@libdir@:g \
-			 			| sed s:__WDB_PKGLIBDIR__:$(libdir)/wdb:g \
+			 			| sed s:__WDB_PKGLIBDIR__:$(libdir)/metno-wdb-metadata:g \
 			 			| sed s:__WDB_PKGDATADIR__:$(pkgdatadir):g \
 			 			| sed s:__WDB_DATADIR__:$(wdbdatadir):g \
 			 			| sed s:__WDB_SYSCONFDIR__:@sysconfdir@:g \
 			 			| sed s:__WDB_LOCALSTATEDIR__:@localstatedir@:g \
 			 			| sed s:__WDB_BINDIR__:@bindir@:g \
 						| sed s:__POSTGIS_DIR__:@postgis_SQL@:g \
+						| sed s:__WCI_SCHEMA__:wci_int:g \
 						| sed s:__SCHEMA_VERSION__:$(MIN_SCHEMA_VERSION):g \
 						| sed s:__WDB_DBNAME__:$(DATABASE_NAME):g \
 						| sed s:__WDB_DISTDIR__:$(PACKAGE)-$(VERSION):g \
@@ -114,9 +115,9 @@ PERFORMANCETESTS =
 STABILITYTESTS =
 
 # Share directory organization
-wdbdatadir = 			$(datadir)/wdb
+wdbdatadir = 			$(datadir)/metno-wdb-metadata
 wdbdata_DATA =
-sqldir = 				$(wdbdatadir)/metno-metadata
+sqldir = 				$(wdbdatadir)/sql
 sql_DATA =
 
 
@@ -126,7 +127,7 @@ sql_DATA =
 
 nodist_bin_SCRIPTS = 	
 
-DISTCLEANFILES +=		metno-metadata-config
+DISTCLEANFILES +=		metno-wdb-metadata-config
 
 include etc/metadata.mk
 

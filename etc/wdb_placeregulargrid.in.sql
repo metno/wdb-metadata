@@ -1,3 +1,4 @@
+SELECT wci.begin( 'wdb', 88, 88, 88 );
 -- Grids
 select wci.addplaceregulargrid('hirlam 10 grid',248,400,0.100,0.100,5.7500,-13.2500,'+proj=ob_tran +o_proj=longlat +lon_0=-40 +o_lat_p=22 +a=6367470.0 +no_defs');
 select wci.addplaceregulargrid('proff grid',850,1100,0.036,0.036,-6.7390,-16.0390,'+proj=ob_tran +o_proj=longlat +lon_0=-24 +o_lat_p=23.5 +a=6367470.0 +no_defs');
