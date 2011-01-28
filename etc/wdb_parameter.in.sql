@@ -1,4 +1,7 @@
-SELECT wci.begin( 'wdb', 0, 0, 0 );
+-- Load all default parameters into namespace
+SELECT wci.begin( 'wdb', 88, 88, 88 );
+SELECT wci.copyParameterNameSpace( 0 );
+
 -- MetNo Specific Parameters
 SELECT wci.addparameter( 'yr weather symbol', null, null, null, null, null, null, 'none' );
 SELECT wci.addparameter( 'probability of yr weather symbol', null, null, null, null, null, null, '%' );
@@ -29,17 +32,3 @@ SELECT wci.addparameter( 'probability of precipitation >2.0mm', null, null, null
 SELECT wci.addparameter( 'probability of precipitation >5.0mm', null, null, null, null, null, null, '%' );
 SELECT wci.addparameter( 'probability of air temperature +/-1.5', null, null, null, null, null, null, '%' );
 SELECT wci.addparameter( 'probability of air temperature +/-2.5', null, null, null, null, null, null, '%' );
-
-
--- Load all default parameters into namespace
-SELECT wci.begin( 'wdb', 88, 88, 88 );
-SELECT wci.setparametername( v.parametername, 
-							 __WCI_SCHEMA__.getparametername( v.cfstandardname,
-							 							      v.cfsurface,
-							 					   			  v.cfcomponent,
-							 					   			  v.cfmedium,
-							 					   			  v.cfprocess,
-							 					   			  v.cfcondition,
-							 					    		  v.cfmethods ) )
-FROM	__WCI_SCHEMA__.parameter v
-WHERE	parameternamespaceid = 0;
