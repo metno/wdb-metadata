@@ -10,8 +10,8 @@ Standards-Version: 3.9.1
 Package: metno-wdb-metadata
 Architecture: any
 Depends: ${misc:Depends}, python (>=2.4),
- postgresql-8.4, postgresql-8.4-postgis, adduser, wdb, 
- dbconfig-common
+ postgresql-8.4, postgresql-8.4-postgis, adduser, 
+ wdb (>=0.9.8), dbconfig-common
 Recommends: postgresql-client
 Description: This is the official met.no metadata package for the 
  WDB database. The purpose of this package is to ensure that the 
