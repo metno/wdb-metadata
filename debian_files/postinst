@@ -19,7 +19,7 @@ set -e
 
 . /usr/share/debconf/confmodule
 # Install Metadata Script
-su postgres -c /usr/lib/metno-wdb-metadata/install_metadata
+su postgres -c /usr/lib/metno-wdb-metadata/install_metadata -u postgres
 
 case "$1" in
     configure)
