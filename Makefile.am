@@ -154,14 +154,27 @@ install-metadata:
 	rm -f @builddir@/var/logs/*
 	@builddir@/install/install_metadata -d $(DATABASE_NAME)
 
+uninstall-metadata: install/uninstall_metadata 
+	@builddir@/install/uninstall_database -d $(DATABASE_NAME)
+
 # We cannot install the database unless we have installed the binaries in 
 # @prefix@, therefore we ommit database installation if DESTDIR has been set.
 install-data-hook:  
-	@if [[ $(DO_INSTALL_DATABASE) = "true" && ! "$(DESTDIR)" ]]; then \
+	@if [[ $(DO_INSTALL_DATABASE) = "true" ]]; then \
 		$(MAKE) install-metadata; \
 	else \
 		echo "-------------------------------------------------------------------------------"; \
 		echo "Run <$(MAKE) install-metadata> to install the metadata"; \
+		echo "-------------------------------------------------------------------------------"; \
+	fi
+
+uninstall-local:
+	@if [[ $(DO_INSTALL_DATABASE) = "true" ]]; then \
+		$(MAKE) uninstall-database; \
+	else \
+		echo "-------------------------------------------------------------------------------"; \
+		echo "Run <$(MAKE) uninstall-metadata> to delete the namespaces installed by this"; \
+		echo "package."; \
 		echo "-------------------------------------------------------------------------------"; \
 	fi
 
