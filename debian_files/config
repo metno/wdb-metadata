@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+# Source debconf library
+. /usr/share/debconf/confmodule
+
+# Ask installation questions:
+# Database Name
+db_input high wdb/metadata_name || true
+# Database Admin
+db_input high wdb/metadata_admin || true
+# Ask the guestions
+db_go

@@ -3,7 +3,8 @@
 # Install Scripts
 #-----------------------------------------------------------------------------
 
-INSTALL_SOURCES =		install/install_metadata.in.sh
+INSTALL_SOURCES =		install/install_metadata.in.sh \
+						install/uninstall_metadata.in.sh
 
 nodist_pkglib_SCRIPTS =	$(INSTALL_SOURCES:.in.sh=)
 

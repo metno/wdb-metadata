@@ -1,5 +1,5 @@
-metno-wdb-metadata (0.9.8-1) lucid; urgency=low
+metno-wdb-metadata (0.9.8-1) lucid; urgency=high
 
-  * Initial Release 
+  * Initial release of the metadata package. 
 
- -- Michael Omotayo Akinde <michaeloa@pc3027.pc.met.no>  Mon, 17 Jan 2011 12:00:00 +0100
+ -- Michael Akinde <wdb@met.no>  Mon, 17 Jan 2011 12:00:00 +0100

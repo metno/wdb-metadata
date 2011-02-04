@@ -67,7 +67,10 @@ select wci.adddataprovider( 'oslo fjord', 'computer system', 'grid', '1 day', 'L
 select wci.adddataprovider( 'nordic', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'senorge', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'yr corrected', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
----98198|0|local eceps modification|2010-01-01T00:00:00Z|infinity|98198|98198
+
+-- Miscellaneous
+select wci.adddataprovider( 'met.no eceps modification', 'computer system', 'grid', '1 day', 'Modified EC EPS data used in the PROFF system' );
+
 ---10300|0|proff.forecaster|2000-01-01T00:00:00Z|2000-01-01T00:00:00Z|10300|10301
 ---88150|0|proff eps|2000-01-01T00:00:00Z|2000-01-01T00:00:00Z|88150|88151
 ---88960|0|wam|2000-01-01T00:00:00Z|2000-01-01T00:00:00Z|88960|88961
