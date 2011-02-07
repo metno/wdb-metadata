@@ -155,7 +155,7 @@ install-metadata:
 	@builddir@/install/install_metadata -d $(DATABASE_NAME)
 
 uninstall-metadata: install/uninstall_metadata 
-	@builddir@/install/uninstall_database -d $(DATABASE_NAME)
+	@builddir@/install/uninstall_metadata -d $(DATABASE_NAME)
 
 # We cannot install the database unless we have installed the binaries in 
 # @prefix@, therefore we ommit database installation if DESTDIR has been set.
@@ -170,7 +170,7 @@ install-data-hook:
 
 uninstall-local:
 	@if [[ $(DO_INSTALL_DATABASE) = "true" ]]; then \
-		$(MAKE) uninstall-database; \
+		$(MAKE) uninstall-metadata; \
 	else \
 		echo "-------------------------------------------------------------------------------"; \
 		echo "Run <$(MAKE) uninstall-metadata> to delete the namespaces installed by this"; \

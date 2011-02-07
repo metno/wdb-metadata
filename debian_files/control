@@ -4,6 +4,7 @@ Priority: extra
 Maintainer: Michael Akinde <wdb@met.no>
 Build-Depends: debhelper (>= 5),
  debconf,
+ po-debconf,
  devscripts,
  autotools-dev,
  autoconf (>=2.61), 

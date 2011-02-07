@@ -5,8 +5,8 @@
 
 # Ask installation questions:
 # Database Name
-db_input high wdb/metadata_name || true
+db_input medium wdb/metadata_name || true
 # Database Admin
-db_input high wdb/metadata_admin || true
+db_input medium wdb/metadata_admin || true
 # Ask the guestions
 db_go
