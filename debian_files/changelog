@@ -2,7 +2,7 @@ metno-wdb-metadata (0.9.8-2) lucid; urgency=high
 
   * 64-bit build (not that it matters). 
 
- -- Michael Akinde <wdb@met.no>  Mon, 17 Jan 2011 12:00:00 +0100
+ -- Michael Akinde <wdb@met.no>  Wed, 23 Feb 2011 12:00:00 +0100
 
 metno-wdb-metadata (0.9.8-1) lucid; urgency=high
 
