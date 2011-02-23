@@ -1,7 +1,7 @@
 Template: wdb/metadata_name
 Type: string
 Default: wdb
-Description: The wdb database name:
+_Description: The wdb database name:
  The name of the wdb database that this package should upgrade. Note that 
  this debian package only supports one wdb installation per server. If 
  you wish to use multiple databases on a single server, you will need
@@ -10,13 +10,13 @@ Description: The wdb database name:
 Template: wdb/metadata_admin
 Type: string
 Default: wdb
-Description: The wdb administrator account:
+_Description: The wdb administrator account:
  This is the username for administration of the wdb database. It is 
  assumed that this user has already been created by the wdb package.
 
 Template: wdb/metadata_purge
 Type: boolean
-Description: Do you want to purge the metadata?
+_Description: Do you want to purge the metadata?
  Purge the metadata if you want to remove the metadata in the database
  installed by this package. Note that - due to the nature of the metadata
  in wdb - a complete purge of the package is not possible. Purging the
