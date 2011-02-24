@@ -209,3 +209,4 @@ update-makefiles:
 
 include mk/debian.mk
 	
+debian: common-debian	
