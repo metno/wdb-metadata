@@ -8,12 +8,10 @@
 #-----------------------------------------------------------------------------
 
 AC_PREREQ(2.59)
-AC_INIT(metno-wdb-metadata, 0.9.8, [wdb@met.no])
+AC_INIT(metno-wdb-metadata, 1.0.0, [wdb@met.no])
 AC_SUBST( [MIN_SCHEMA_VERSION],["0"] )
 
 # Config
-# AC_CONFIG_SRCDIR([config.h.in])
-# AC_CONFIG_HEADER([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
 #-----------------------------------------------------------------------------
@@ -33,11 +31,8 @@ AC_PROG_MAKE_SET
 #-----------------------------------------------------------------------------
 
 # POSTGRES
-WDB_POSTGRES_CHECK(8.1.x)
-WDB_POSTGIS_CHECK(1.1.x)
-
-AM_PATH_PYTHON(2.4,, [:])
-AM_CONDITIONAL([HAVE_PYTHON], [test "$PYTHON" != :])
+WDB_POSTGRES_CHECK(8.4.x)
+WDB_POSTGIS_CHECK(1.4.x)
 
 # DOCBOOK
 WDB_DOCBOOK_CHECK
