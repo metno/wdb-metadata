@@ -1,4 +1,4 @@
-metno-wdb-metadata (1.0.0~rc1-1) lucid; urgency=high
+metno-wdb-metadata (1.0.0~rc1-1) lucid; urgency=low
 
   * Initial release of the wdb metadata package. 
 

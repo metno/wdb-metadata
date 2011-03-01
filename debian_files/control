@@ -16,7 +16,7 @@ Package: metno-wdb-metadata
 Architecture: any
 Depends: ${misc:Depends},
  postgresql-client (>=8.4.0),
- wdb (>=0.9.8)
+ wdb-1.0
 Description: This is the official met.no metadata package for the 
  WDB database. The purpose of this package is to ensure that the 
  database contains all relevant metadata for the loading and
