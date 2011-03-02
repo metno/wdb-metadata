@@ -1,3 +1,9 @@
+metno-wdb-metadata (1.0.0~rc2-1) lucid; urgency=low
+
+  * Added statkart.no as a new dataprovider (used by demLoad). 
+
+ -- Michael Akinde <wdb@met.no>  Mon, 28 Feb 2011 12:00:00 +0100
+
 metno-wdb-metadata (1.0.0~rc1-1) lucid; urgency=low
 
   * Initial release of the wdb metadata package. 

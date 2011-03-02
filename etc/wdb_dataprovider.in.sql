@@ -72,6 +72,7 @@ select wci.adddataprovider( 'yr corrected', 'computer system', 'grid', '1 day', 
 
 -- Miscellaneous
 select wci.adddataprovider( 'met.no eceps modification', 'computer system', 'grid', '1 day', 'Modified EC EPS data used in the PROFF system' );
+select wci.adddataprovider( 'statkart.no', 'organization', 'grid', '1000 years', 'Statens Kartverk' );
 
 ---10300|0|proff.forecaster|2000-01-01T00:00:00Z|2000-01-01T00:00:00Z|10300|10301
 ---88150|0|proff eps|2000-01-01T00:00:00Z|2000-01-01T00:00:00Z|88150|88151
