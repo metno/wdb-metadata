@@ -3,7 +3,6 @@ SELECT wci.begin( 'wdb', 88, 88, 88 );
 select wci.addplaceregulargrid('hirlam 10 grid',248,400,0.100,0.100,5.7500,-13.2500,'+proj=ob_tran +o_proj=longlat +lon_0=-40 +o_lat_p=22 +a=6367470.0 +no_defs');
 select wci.addplaceregulargrid('proff grid',850,1100,0.036,0.036,-6.7390,-16.0390,'+proj=ob_tran +o_proj=longlat +lon_0=-24 +o_lat_p=23.5 +a=6367470.0 +no_defs');
 select wci.addplaceregulargrid('proff temperature grid', 1060, 3680, 0.0045, 0.0045, 12.8, -4.8, '+proj=ob_tran +o_proj=longlat +lon_0=-24 +o_lat_p=23.5 +a=6367470.0 +no_defs');
-select wci.addplaceregulargrid('ecmwf grid',187,109,0.500,0.500,-21.0000,30.0000,'+proj=longlat +a=6367470.0 +towgs84=0,0,0 +no_defs');
 select wci.addplaceregulargrid('norway 025',373,137,0.250,0.250,-21.0000,50.0000,'+proj=longlat +a=6367470.0 +towgs84=0,0,0 +no_defs');
 select wci.addplaceregulargrid('hirlam yr grid',344,555,0.072,0.072,5.7500,-13.2500,'+proj=ob_tran +o_proj=longlat +lon_0=-40 +o_lat_p=22 +a=6367470.0 +no_defs');
 select wci.addplaceregulargrid('wam 50km grid',142,113,0.450,0.450,-41.8000,-25.0000,'+proj=ob_tran +o_proj=longlat +lon_0=0 +o_lat_p=25 +a=6367470.0 +no_defs');
