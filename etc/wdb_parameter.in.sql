@@ -6,6 +6,7 @@ SELECT wci.copyParameterNameSpace( 0 );
 SELECT wci.addparameter( 'kalman air temperature', null, null, null, null, null, null, 'K' );
 SELECT wci.addparameter( 'probability of precipitation', null, null, null, null, null, null, '%' );
 SELECT wci.addparameter( 'unsmoothed altitude', null, null, null, null, null, null, 'm' );
+SELECT wci.addparameter( 'sea ice presence', null, null, null, null, null, null, 'none' );
 SELECT wci.addparameter( 'vessel icing index', null, null, null, null, null, null, 'none' );
 SELECT wci.addparameter( 'unsmoothed land area fraction', null, null, null, null, null, null, '%' );
 SELECT wci.addparameter( 'probability of wind speed', null, null, null, null, null, null, '%' );
