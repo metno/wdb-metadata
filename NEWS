@@ -1,8 +1,10 @@
 metno-wdb-metadata (1.0.1-1) lucid; urgency=medium
 
-  * Added parameter: sea ice presence
+  * Added data provider: hpc forecast.
+  
+  * Added parameter: sea ice presence.
 
- -- Michael Akinde <wdb@met.no>  Fri, 25 Mar 2011 12:00:00 +0000
+ -- Michael Akinde <wdb@met.no>  Tue, 3 May 2011 12:00:00 +0000
 
 metno-wdb-metadata (1.0.0-1) lucid; urgency=high
 
