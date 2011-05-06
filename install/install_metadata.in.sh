@@ -23,7 +23,9 @@
 
 version_number=__SCHEMA_VERSION__
 
-DEFAULT_DATABASE=`wdbConfiguration --database`@`__WDB_BINDIR__/wdbConfiguration --host`
+type -P wdbConfiguration &>/dev/null || { echo "ERROR: Could not find wdbConfiguration. Aborting." >&2; exit 1; }
+
+DEFAULT_DATABASE=`wdbConfiguration --database`@`wdbConfiguration --host`
 DEFAULT_USER=`wdbConfiguration --user`
 DEFAULT_PORT=`wdbConfiguration --port`
 

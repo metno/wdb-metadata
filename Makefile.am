@@ -160,7 +160,7 @@ uninstall-metadata: install/uninstall_metadata
 # We cannot install the database unless we have installed the binaries in 
 # @prefix@, therefore we ommit database installation if DESTDIR has been set.
 install-data-hook:  
-	@if [[ $(DO_INSTALL_DATABASE) = "true" ]]; then \
+	@if [[ $(DO_INSTALL_DATABASE) = "true" && ! "$(DESTDIR)" ]]; then \
 		$(MAKE) install-metadata; \
 	else \
 		echo "-------------------------------------------------------------------------------"; \
@@ -169,7 +169,7 @@ install-data-hook:
 	fi
 
 uninstall-local:
-	@if [[ $(DO_INSTALL_DATABASE) = "true" ]]; then \
+	@if [[ $(DO_INSTALL_DATABASE) = "true" && ! "$(DESTDIR)" ]]; then \
 		$(MAKE) uninstall-metadata; \
 	else \
 		echo "-------------------------------------------------------------------------------"; \
