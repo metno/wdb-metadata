@@ -6,7 +6,6 @@ autom4te.cache/
 compile
 config.log
 config.status
-config/
 configure
 etc/Makefile
 etc/Makefile.in

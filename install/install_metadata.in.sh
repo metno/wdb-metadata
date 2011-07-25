@@ -23,11 +23,11 @@
 
 version_number=__SCHEMA_VERSION__
 
-type -P wdbConfiguration &>/dev/null || { echo "ERROR: Could not find wdbConfiguration. Aborting." >&2; exit 1; }
+type -P __WDB_BINDIR__/wdbConfiguration &>/dev/null || { echo "ERROR: Could not find wdbConfiguration. Aborting." >&2; exit 1; }
 
-DEFAULT_DATABASE=`wdbConfiguration --database`@`wdbConfiguration --host`
-DEFAULT_USER=`wdbConfiguration --user`
-DEFAULT_PORT=`wdbConfiguration --port`
+DEFAULT_DATABASE=`__WDB_BINDIR__/wdbConfiguration --database`@`__WDB_BINDIR__/wdbConfiguration --host`
+DEFAULT_USER=`__WDB_BINDIR__/wdbConfiguration --user`
+DEFAULT_PORT=`__WDB_BINDIR__/wdbConfiguration --port`
 
 SCRIPT_VERSION=__WDB_VERSION__
 
