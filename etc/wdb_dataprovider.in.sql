@@ -69,7 +69,7 @@ select wci.adddataprovider( 'barents', 'computer system', 'grid', '1 day', 'Loca
 select wci.adddataprovider( 'bodoloppa', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'oslo fjord', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'nordic', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
-select wci.adddataprovider( 'senorge', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
+select wci.adddataprovider( 'senorge', 'computer system', 'grid', '1000 years', 'Local norwegian field data' );
 select wci.adddataprovider( 'yr corrected', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 
 -- Miscellaneous
