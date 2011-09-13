@@ -10,7 +10,7 @@
 #-----------------------------------------------------------------------------
 
 # Scanned by Autoreconf; must be static (no expansion)
-ACLOCAL_AMFLAGS = 		-I m4
+ACLOCAL_AMFLAGS = 		-I config/m4
 
 AM_CPPFLAGS =			-DSYSCONFDIR=\"$(sysconfdir)\"
 AM_LDFLAGS =			-L@builddir@
@@ -207,6 +207,6 @@ update-makefiles:
 # Debian Makefile
 #-----------------------------------------------------------------------------
 
-include mk/debian.mk
+include config/mk/debian.mk
 	
 debian: common-debian	
