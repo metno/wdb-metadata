@@ -12,7 +12,7 @@ AC_INIT(metno-wdb-metadata, 1.0.1, [wdb@met.no])
 AC_SUBST( [MIN_SCHEMA_VERSION],["0"] )
 
 # Config
-AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_MACRO_DIR([config/m4])
 
 #-----------------------------------------------------------------------------
 # Programs
