@@ -1,10 +1,10 @@
-metno-wdb-metadata (1.0.1~rc2-1) lucid; urgency=medium
+metno-wdb-metadata (1.0.1-1) lucid; urgency=medium
 
-  * Added data provider: hpc forecast, ecmwf 37r2, and proff.h12h8ppvum4.
+  * Added data provider: hpc forecast, ecmwf 37r2, ecmwf 37r3, and proff.h12h8ppvum4.
   
   * Added parameter: sea ice presence.
   
- -- Michael Akinde <wdb@met.no>  Mon, 12 Sep 2011 12:00:00 +0000
+ -- Michael Akinde <wdb@met.no>  Mon, 7 Nov 2011 12:00:00 +0000
 
 metno-wdb-metadata (1.0.0-1) lucid; urgency=high
 
