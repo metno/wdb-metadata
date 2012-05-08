@@ -6,7 +6,7 @@
 INSTALL_SOURCES =		install/install_metadata.in.sh \
 						install/uninstall_metadata.in.sh
 
-nodist_pkglib_SCRIPTS =	$(INSTALL_SOURCES:.in.sh=)
+nodist_pkglibexec_SCRIPTS =	$(INSTALL_SOURCES:.in.sh=)
 
 EXTRA_DIST +=			$(INSTALL_SOURCES) \
 						install/Makefile.am \

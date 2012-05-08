@@ -90,8 +90,6 @@ SUFFIXES = 				.in.cron .cron \
 # Setting Targets
 bin_PROGRAMS =
 bin_SCRIPTS =
-pkglib_PROGRAMS =
-pkglib_SCRIPTS =
 pkginclude_HEADERS =
 lib_LTLIBRARIES = 
 sysconf_DATA =
