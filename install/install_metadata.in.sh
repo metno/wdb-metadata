@@ -272,6 +272,11 @@ else
     echo "done"
 fi
 	
+# Adding users
+echo -n "adding met.no user... "
+/usr/bin/wdb createuser locationforecastload WRITE
+echo "done"
+	
 
 echo "---- metno wdb metadata installation completed ----"
 exit 0

@@ -21,6 +21,8 @@ select wci.adddataprovider( 'proff.h12h8um4', 'computer system', 'grid', '1 day'
 select wci.adddataprovidertogroup( 'proff.h12h8um4', 'proff');
 select wci.adddataprovider( 'proff.h12h8ppvum4', 'computer system', 'grid', '1 day', 'proff.h12h8ppvum4' );
 select wci.adddataprovidertogroup( 'proff.h12h8ppvum4', 'proff');
+select wci.adddataprovider( 'proff.h12h8ppv', 'computer system', 'grid', '1 day', 'proff.h12h8ppv' );
+select wci.adddataprovidertogroup( 'proff.h12h8ppv', 'proff');
 select wci.adddataprovider( 'proff.default', 'computer system', 'grid', '1 day', 'proff.default' );
 select wci.adddataprovidertogroup( 'proff.default', 'proff');
 select wci.adddataprovider( 'proff.approved', 'computer system', 'grid', '1 day', 'proff.approved' );
