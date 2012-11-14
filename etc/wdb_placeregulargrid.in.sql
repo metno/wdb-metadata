@@ -15,10 +15,13 @@ select wci.addplaceregulargrid('north sea 4km grid',167,280,4000.000,4000.000,-2
 select wci.addplaceregulargrid('oslo fjord 300m grid',240,396,300.000,300.000,-795000.0000,-3211800.0000,'+proj=stere +lat_0=90 +lon_0=24 +lat_ts=60 +a=6371000 +units=m +no_defs');
 select wci.addplaceregulargrid('boddo loppa 500m grid',980,303,500.000,500.000,-1668500.0000,-1723500.0000,'+proj=stere +lat_0=90 +lon_0=58 +lat_ts=60 +a=6371000 +units=m +no_defs');
 select wci.addplaceregulargrid('senorge 1km grid',1195,1550,1000.000,1000.000,-75000.0000,6450000.0000,'+proj=utm +lon_0=15 +datum=WGS84 +units=m +no_defs');
+select wci.addplaceregulargrid('swan 500m',418,150,0.009,0.0045,7.5,63.08,'+proj=longlat +a=6367470.0 +towgs84=0,0,0 +no_defs');
+select wci.addplaceregulargrid('swan karmøy 500m',120,170,0.0088,0.0045,4.75,58.8499,'+proj=longlat +a=6367470.0 +towgs84=0,0,0 +no_defs');
 select wci.addplaceregulargrid('ecmwf grid',187,109,0.500,0.500,-21.0000,30.0000,'+proj=longlat +a=6367470.0 +towgs84=0,0,0 +no_defs');
 select wci.addplaceregulargrid('ecmwf grid 1',720,181,0.500,0.500,-179.5000,0.0000,'+proj=longlat +a=6367470.0 +towgs84=0,0,0 +no_defs');
 select wci.addplaceregulargrid('ecmwf grid 2',720,181,0.500,0.500,-179.5000,-90.0000,'+proj=longlat +a=6367470.0 +towgs84=0,0,0 +no_defs');
 select wci.addplaceregulargrid('ecmwf grid 3',1440,721,0.250,0.250,-179.7500,-90.0000,'+proj=longlat +a=6367470.0 +towgs84=0,0,0 +no_defs');
+select wci.addplaceregulargrid('ecmwf grid 4',720,361,0.500,0.500,-179.5000,-90.0000,'+proj=longlat +a=6367470.0 +towgs84=0,0,0 +no_defs');
 select wci.addplaceregulargrid('norway 25m 6403_32',4001,4001,25.000,25.000,300000.0000,6400000.0000,'+proj=utm +zone=32 +ellps=WGS84 +datum=WGS84 +units=m +no_defs');
 select wci.addplaceregulargrid('norway 25m 6404_32',4001,4001,25.000,25.000,400000.0000,6400000.0000,'+proj=utm +zone=32 +ellps=WGS84 +datum=WGS84 +units=m +no_defs');
 select wci.addplaceregulargrid('norway 25m 6405_32',2001,2001,25.000,25.000,500000.0000,6450000.0000,'+proj=utm +zone=32 +ellps=WGS84 +datum=WGS84 +units=m +no_defs');

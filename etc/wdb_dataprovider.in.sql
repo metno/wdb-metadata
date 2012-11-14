@@ -51,6 +51,7 @@ select wci.adddataprovidertogroup( 'ecmwf atmospheric 37r3', 'ecmwf atmospheric'
 select wci.adddataprovider( 'ecmwf atmospheric 38r1', 'computer system', 'grid', '1 day', 'ECMWF atmospheric development cycle 38r1' );
 select wci.adddataprovidertogroup( 'ecmwf atmospheric 38r1', 'ecmwf atmospheric');
 
+
 -- ECMWF Data (repackaged at met.no)
 select wci.adddataprovider( 'ecmwf felt', 'data provider group', 'grid', '1 day', 'ECMWF fields packaged as FELT files' );
 select wci.adddataprovider( 'ecmwf felt 103', 'computer system', 'grid', '1 day', 'ECMWF field packaged as FELT files' );
@@ -80,7 +81,14 @@ select wci.adddataprovider( 'nordic', 'computer system', 'grid', '1 day', 'Local
 select wci.adddataprovider( 'senorge', 'computer system', 'grid', '1000 years', 'Local norwegian field data' );
 select wci.adddataprovider( 'yr corrected', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 
+-- Oceanic Data
+select wci.adddataprovider( 'swan', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
+select wci.adddataprovider( 'swan500m', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
+select wci.adddataprovider( 'swan_karmoy500m', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
+
+
 -- Miscellaneous
+select wci.adddataprovider( 'ecmwf eps felt', 'computer system', 'grid', '1 day', 'Modified EC EPS data used in the PROFF system' );
 select wci.adddataprovider( 'met.no eceps modification', 'computer system', 'grid', '1 day', 'Modified EC EPS data used in the PROFF system' );
 select wci.adddataprovider( 'statkart.no', 'organization', 'grid', '1000 years', 'Statens Kartverk' );
 
@@ -89,3 +97,30 @@ select wci.adddataprovider( 'hpc forecast', 'computer system', 'grid', '1 day', 
 ---10300|0|proff.forecaster|2000-01-01T00:00:00Z|2000-01-01T00:00:00Z|10300|10301
 ---88150|0|proff eps|2000-01-01T00:00:00Z|2000-01-01T00:00:00Z|88150|88151
 ---88960|0|wam|2000-01-01T00:00:00Z|2000-01-01T00:00:00Z|88960|88961
+
+select wci.adddataprovider( 'hirlam', 'data provider group', 'grid', '1 day', 'Hirlam' );
+select wci.adddataprovider( 'hirlam 50km', 'computer system', 'grid', '1 day', 'Hirlam 50km' );
+select wci.adddataprovidertogroup( 'hirlam 50km', 'hirlam');
+select wci.adddataprovider( 'hirlam 20km', 'computer system', 'grid', '1 day', 'Hirlam 20km' );
+select wci.adddataprovidertogroup( 'hirlam 20km', 'hirlam');
+select wci.adddataprovider( 'hirlam 10km', 'computer system', 'grid', '1 day', 'Hirlam 10km' );
+select wci.adddataprovidertogroup( 'hirlam 10km', 'hirlam');
+select wci.adddataprovider( 'hirlam 12km', 'computer system', 'grid', '1 day', 'Hirlam 12km' );
+select wci.adddataprovidertogroup( 'hirlam 12km', 'hirlam');
+select wci.adddataprovider( 'hirlam 8km', 'computer system', 'grid', '1 day', 'Hirlam 8km' );
+select wci.adddataprovidertogroup( 'hirlam 8km', 'hirlam');
+select wci.adddataprovider( 'hirlam 4km', 'computer system', 'grid', '1 day', 'Hirlam 4km' );
+select wci.adddataprovidertogroup( 'hirlam 4km', 'hirlam');
+
+select wci.adddataprovider( 'ecmwf atmospheric 0.5 deg', 'data provider group', 'grid', '1 day', 'ECMWF atmospheric development cycle 38r1' );
+select wci.adddataprovidertogroup( 'ecmwf atmospheric 0.5 deg', 'ecmwf atmospheric');
+select wci.adddataprovider( 'ecmwf atmospheric 1.5 deg', 'data provider group', 'grid', '1 day', 'ECMWF atmospheric development cycle 38r1' );
+select wci.adddataprovidertogroup( 'ecmwf atmospheric 1.5 deg', 'ecmwf atmospheric');
+select wci.adddataprovider( 'ecmwf atmospheric 0.5 deg 38r1', 'computer system', 'grid', '1 day', 'ECMWF atmospheric 0.5 resolution development cycle 38r1' );
+select wci.adddataprovidertogroup( 'ecmwf atmospheric 0.5 deg 38r1', 'ecmwf atmospheric 0.5 deg');
+select wci.adddataprovider( 'ecmwf atmospheric 1.5 deg 38r1', 'computer system', 'grid', '1 day', 'ECMWF atmospheric 1.5 resolution development cycle 38r1' );
+select wci.adddataprovidertogroup( 'ecmwf atmospheric 1.5 deg 38r1', 'ecmwf atmospheric 1.5 deg');
+
+select wci.adddataprovider( 'unified model', 'data provider group', 'grid', '1 day', 'Unified Model' );
+select wci.adddataprovider( 'unified model 4km', 'computer system', 'grid', '1 day', 'Unified Model 4km' );
+select wci.adddataprovidertogroup( 'unified model 4km', 'unified model');
