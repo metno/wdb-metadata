@@ -34,4 +34,13 @@ SELECT wci.addparameter( 'probability of precipitation >2.0mm', null, null, null
 SELECT wci.addparameter( 'probability of precipitation >5.0mm', null, null, null, null, null, null, '%' );
 SELECT wci.addparameter( 'probability of air temperature +/-1.5', null, null, null, null, null, null, '%' );
 SELECT wci.addparameter( 'probability of air temperature +/-2.5', null, null, null, null, null, null, '%' );
-SELECT wci.addparameter( 'peak wave plane angle', null, null, null, null, null, null, 'rad' );
+
+-- MetNo Wave Parameters
+SELECT wci.addparameter( 'sea surface wave height', null, null, null, null, null, 'mean within days', 'm' );
+SELECT wci.addparameter( 'sea surface wave significant period', null, null, null, null, null, null, 's' );
+SELECT wci.addparameter( 'sea surface wave period', null, null, null, null, null, 'maximum within days', 's' );
+SELECT wci.addparameter( 'sea surface wave to direction', null, null, null, null, null, 'maximum within days', 'rad' );
+SELECT wci.addparameter( 'sea surface swell wave period', null, null, null, null, null, 'mean within days', 's' );
+SELECT wci.addparameter( 'sea surface swell wave to direction', null, null, null, null, null, 'mean within days', 'rad' );
+SELECT wci.addparameter( 'sea surface swell wave period', null, null, null, null, null, 'maximum within days', 's' );
+SELECT wci.addparameter( 'sea surface swell wave to direction', null, null, null, null, null, 'maximum within days', 'rad' );

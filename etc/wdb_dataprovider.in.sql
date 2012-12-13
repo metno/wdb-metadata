@@ -84,7 +84,9 @@ select wci.adddataprovider( 'yr corrected', 'computer system', 'grid', '1 day', 
 -- Oceanic Data
 select wci.adddataprovider( 'swan', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'swan500m', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
+select wci.adddataprovidertogroup( 'swan500m', 'swan');
 select wci.adddataprovider( 'swan_karmoy500m', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
+select wci.adddataprovidertogroup( 'swan_karmoy500m', 'swan');
 
 
 -- Miscellaneous
