@@ -1,3 +1,9 @@
+metno-wdb-metadata (1.0.6-1) precise; urgency=low
+
+  * Improved the search for PostGIS in configure.
+  
+ -- Michael Akinde <wdb@met.no>  Wed, 22 Feb 2013 14:30:00 +0000
+
 metno-wdb-metadata (1.0.5-1) precise; urgency=low
 
   * Added new northern europe grid from DNMI.
