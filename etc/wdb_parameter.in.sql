@@ -36,6 +36,7 @@ SELECT wci.addparameter( 'probability of air temperature +/-1.5', null, null, nu
 SELECT wci.addparameter( 'probability of air temperature +/-2.5', null, null, null, null, null, null, '%' );
 
 -- MetNo Wave Parameters
+select wci.addcfmethods('mean within days', 'Mean', 'mean' );
 SELECT wci.addparameter( 'sea surface wave height', null, null, null, null, null, 'mean within days', 'm' );
 SELECT wci.addparameter( 'sea surface wave significant period', null, null, null, null, null, null, 's' );
 SELECT wci.addparameter( 'sea surface wave period', null, null, null, null, null, 'maximum within days', 's' );
