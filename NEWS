@@ -1,3 +1,10 @@
+metno-wdb-metadata (1.0.7-1) lucid; urgency=low
+
+  * updates for probability forcasts 
+  * Fixed various minor issues with data provider groups
+
+ -- Vegard Bønes <vegard.bones@met.no>  Fri, 24 May 2013 07:36:32 +0200
+
 metno-wdb-metadata (1.0.6-1) precise; urgency=low
 
   * Improved the search for PostGIS in configure.
