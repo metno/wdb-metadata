@@ -80,6 +80,7 @@ select wci.adddataprovider( 'oslo fjord', 'computer system', 'grid', '1 day', 'L
 select wci.adddataprovider( 'nordic', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'senorge', 'computer system', 'grid', '1000 years', 'Local norwegian field data' );
 select wci.adddataprovider( 'yr corrected', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
+select wci.adddataprovider( 'eps2probandltf', 'computer system', 'grid', '1 day', 'Probabilities calculated by the eps2probandltf program' );
 
 -- Oceanic Data
 select wci.adddataprovider( 'swan', 'data provider group', 'grid', '1 day', 'Local norwegian field data' );
