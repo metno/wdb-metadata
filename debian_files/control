@@ -1,4 +1,4 @@
-Source: metno-wdb-metadata
+Source: metno-wdb-metadata-1.1
 Section: devel
 Priority: extra
 Maintainer: Michael Akinde <wdb@met.no>
@@ -13,7 +13,7 @@ Build-Depends: debhelper (>= 5),
  xmlto
 Standards-Version: 3.9.3
 
-Package: metno-wdb-metadata
+Package: metno-wdb-metadata-1.1
 Architecture: any
 Depends: ${misc:Depends},
  postgresql-client,

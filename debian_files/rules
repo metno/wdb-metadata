@@ -3,6 +3,10 @@
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/autotools.mk
 
-install/metno-wdb-metadata::
-	mv $(CURDIR)/debian/metno-wdb-metadata/usr/lib/metno-wdb-metadata/metno-wdb-metadata/* $(CURDIR)/debian/metno-wdb-metadata/usr/lib/metno-wdb-metadata/
-	rm -rf $(CURDIR)/debian/metno-wdb-metadata/usr/lib/metno-wdb-metadata/metno-wdb-metadata/
+install/metno-wdb-metadata-1.1::
+	# libexec hack
+	mv $(CURDIR)/debian/metno-wdb-metadata-1.1/usr/lib/metno-wdb-metadata-1.1/metno-wdb-metadata/* $(CURDIR)/debian/metno-wdb-metadata-1.1/usr/lib/metno-wdb-metadata-1.1/
+	rm -rf $(CURDIR)/debian/metno-wdb-metadata-1.1/usr/lib/metno-wdb-metadata-1.1/metno-wdb-metadata/
+	# avoid lintian warning (duplicate changelog)
+	rm $(CURDIR)/NEWS
+	

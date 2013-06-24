@@ -50,6 +50,8 @@ SELECT wci.adddataprovider( 'ecmwf atmospheric 37r3', 'computer system', 'grid',
 SELECT wci.adddataprovidertogroup( 'ecmwf atmospheric 37r3', 'ecmwf atmospheric');
 SELECT wci.adddataprovider( 'ecmwf atmospheric 38r1', 'computer system', 'grid', '1 day', 'ECMWF atmospheric development cycle 38r1' );
 SELECT wci.adddataprovidertogroup( 'ecmwf atmospheric 38r1', 'ecmwf atmospheric');
+SELECT wci.adddataprovider( 'ecmwf atmospheric 38r2', 'computer system', 'grid', '1 day', 'ECMWF atmospheric development cycle 38r2' );
+SELECT wci.adddataprovidertogroup( 'ecmwf atmospheric 38r2', 'ecmwf atmospheric');
 
 
 -- ECMWF Data (repackaged at met.no)
@@ -173,13 +175,19 @@ SELECT wci.adddataprovidertogroup( 'uk_global_interpolated_v0', 'uk_global_inter
 SELECT wci.adddataprovider( 'uk_global_interpolated_v1', 'computer system', 'point','1 day', 'UK MetOffice global model point data generated on a 4km grid, interpolated bilinearly using the WDB point from grid loading program, version 1.2.x.' );
 SELECT wci.adddataprovidertogroup( 'uk_global_interpolated_v1', 'uk_global_interpolated');
 
+SELECT wci.adddataprovider( 'ecmwf_interpolated', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 0.5 grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovider( 'ecmwf_interpolated_v0', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 0.5 grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
+SELECT wci.adddataprovidertogroup( 'ecmwf_interpolated_v0', 'ecmwf_interpolated');
+
 SELECT wci.adddataprovider( 'ecmwf05_interpolated', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 0.5 grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovidertogroup( 'ecmwf05_interpolated', 'ecmwf_interpolated');
 SELECT wci.adddataprovider( 'ecmwf05_interpolated_v0', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 0.5 grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
 SELECT wci.adddataprovidertogroup( 'ecmwf05_interpolated_v0', 'ecmwf05_interpolated');
 SELECT wci.adddataprovider( 'ecmwf05_interpolated_v1', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 0.5 grid, interpolated bilinearly using the WDB point from grid loading program, version 1.2.x.' );
 SELECT wci.adddataprovidertogroup( 'ecmwf05_interpolated_v1', 'ecmwf05_interpolated');
 
 SELECT wci.adddataprovider( 'ecmwf15_interpolated', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 1.5 grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovidertogroup( 'ecmwf15_interpolated', 'ecmwf_interpolated');
 SELECT wci.adddataprovider( 'ecmwf15_interpolated_v0', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 1.5 grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
 SELECT wci.adddataprovidertogroup( 'ecmwf15_interpolated_v0', 'ecmwf15_interpolated');
 SELECT wci.adddataprovider( 'ecmwf15_interpolated_v1', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 1.5 grid, interpolated bilinearly using the WDB point from grid loading program, version 1.2.x.' );
