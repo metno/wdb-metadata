@@ -1,4 +1,4 @@
-metno-wdb-metadata-1.1 (1.1.0~rc1-1) precise; urgency=low
+metno-wdb-metadata-1.1 (1.1.0~rc2-1) precise; urgency=low
 
   * Added namespace, dataproviders, and positions for the Vega system.
   * Added ecmwf 38r2 dataprovider.
