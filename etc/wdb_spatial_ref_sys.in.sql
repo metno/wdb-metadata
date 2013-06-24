@@ -5,3 +5,5 @@ select wci.addsrid( 'SeNorge UTM', '+proj=utm +lon_0=15 +datum=WGS84 +units=m +n
 select wci.addsrid( 'Probability forecasts', '+proj=longlat +R=6.371e+06 +no_defs' );
 select wci.addsrid( 'Probability forecasts', '+proj=longlat +a=6367470 +e=0' );
 select wci.addsrid( 'Probability forecasts', '+proj=lcc +lat_0=64.35 +lat_1=64.35 +lat_2=64.35 +lon_0=-23 +R=6371000 +x_0=-1.20288e+06 +y_0=396964' );
+select wci.addsrid( 'Simple longlat', '+proj=longlat +a=6367470 +e=0' );
+select wci.addsrid( 'lcc for high resolution projection of Norway', '+proj=lcc +lat_0=64.35 +lat_1=64.35 +lat_2=64.35 +lon_0=-23 +R=6371000 +units=m' );
