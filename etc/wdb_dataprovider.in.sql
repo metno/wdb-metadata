@@ -66,6 +66,7 @@ select wci.adddataprovidertogroup( 'ecmwf felt 106', 'ecmwf felt');
 -- Norwegian Forecast Data
 select wci.adddataprovider( 'hirlam norway', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'wam norway', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
+select wci.adddataprovider( 'pgen_probability', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'pgen_probability yr', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'pgen_percentile yr', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'trheimsleia', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
