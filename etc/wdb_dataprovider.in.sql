@@ -80,7 +80,12 @@ select wci.adddataprovider( 'oslo fjord', 'computer system', 'grid', '1 day', 'L
 select wci.adddataprovider( 'nordic', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'senorge', 'computer system', 'grid', '1000 years', 'Local norwegian field data' );
 select wci.adddataprovider( 'yr corrected', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
-select wci.adddataprovider( 'eps2probandltf', 'computer system', 'grid', '1 day', 'Probabilities calculated by the eps2probandltf program' );
+select wci.adddataprovider( 'met eceps forecast', 'data provider group', 'grid', '1 day', 'Probabilities calculated by the eps2probandltf program' );
+select wci.adddataprovider( 'met eceps large domain', 'computer system', 'grid', '1 day', 'Probabilities calculated by the eps2probandltf program big grid' );
+select wci.adddataprovidertogroup( 'met eceps large domain', 'met eceps forecast');
+select wci.adddataprovider( 'met eceps small domain', 'computer system', 'grid', '1 day', 'Probabilities calculated by the eps2probandltf program close-cropped norway' );
+select wci.adddataprovidertogroup( 'met eceps small domain', 'met eceps forecast');
+
 
 -- Oceanic Data
 select wci.adddataprovider( 'swan', 'data provider group', 'grid', '1 day', 'Local norwegian field data' );
