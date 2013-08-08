@@ -1,6 +1,13 @@
 -- Data Providers
 SELECT wci.begin( 'wdb', 88, 88, 88 );
 
+--- AROME Data
+SELECT wci.adddataprovider( 'arome',   'data provider group', 'any', '1 day', 'Field data produced using the AROME model' );
+SELECT wci.adddataprovider( 'arome25', 'computer system', 'grid', '1 day', 'arome25' );
+SELECT wci.adddataprovidertogroup( 'arome25', 'arome');
+SELECT wci.adddataprovider( 'arome25_temperature_corrected', 'computer system', 'grid', '1 day', 'arome25 corrected temperature fields' );
+SELECT wci.adddataprovidertogroup( 'arome25_temperature_corrected', 'arome');
+
 --- PROFF Data
 SELECT wci.adddataprovider( 'proff',   'data provider group', 'any', '1 day', 'Field data produced in the PROFF system' );
 SELECT wci.adddataprovider( 'proff.raw', 'computer system', 'grid', '1 day', 'proff.raw' );

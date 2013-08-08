@@ -1,5 +1,6 @@
 SELECT wci.begin( 'wdb', 88, 88, 88 );
 -- Grids
+select wci.addplaceregulargrid('arome_norway_grid',418,150,0.009,0.0045,7.5,63.08,'+proj=lcc +lon_0=15 +lat_1=63 +lat_2=63 +R=6.371e+06 +no_defs');
 select wci.addplaceregulargrid('dnmi_neurope_grid',235, 340, 0.2, 0.1, -12, 48, '+proj=longlat +a=6367470.0 +towgs84=0,0,0 +no_defs');
 select wci.addplaceregulargrid('hirlam 10 grid',248,400,0.100,0.100,5.7500,-13.2500,'+proj=ob_tran +o_proj=longlat +lon_0=-40 +o_lat_p=22 +a=6367470.0 +no_defs');
 select wci.addplaceregulargrid('proff grid',850,1100,0.036,0.036,-6.7390,-16.0390,'+proj=ob_tran +o_proj=longlat +lon_0=-24 +o_lat_p=23.5 +a=6367470.0 +no_defs');
