@@ -17,6 +17,7 @@ AM_LDFLAGS =			-L@builddir@
 
 LIBTOOL_VERSION_FLAG = 	-release $(VERSION)
 
+
 # Compiler Settings
 SED_SUBSTITUTION = 		sed s:__WDB_VERSION__:$(VERSION):g $<\
 						| sed s:__WDB_LOGDIR__:@abs_builddir@/var/logs:g \
