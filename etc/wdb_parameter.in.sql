@@ -34,6 +34,13 @@ SELECT wci.addparameter( 'probability of precipitation >2.0mm', null, null, null
 SELECT wci.addparameter( 'probability of precipitation >5.0mm', null, null, null, null, null, null, '%' );
 SELECT wci.addparameter( 'probability of air temperature +/-1.5', null, null, null, null, null, null, '%' );
 SELECT wci.addparameter( 'probability of air temperature +/-2.5', null, null, null, null, null, null, '%' );
+SELECT wci.addcfmethods('low estimate', 'lower estimate', 'low estimate of' );
+SELECT wci.addparameter( 'precipitation amount', null, null, null, null, null, 'low estimate', 'kg/m2' );
+SELECT wci.addcfmethods('middle estimate', 'middle estimate', 'middle estimate of' );
+SELECT wci.addparameter( 'precipitation amount', null, null, null, null, null, 'middle estimate', 'kg/m2' );
+SELECT wci.addcfmethods('high estimate', 'higher estimate', 'high estimate of' );
+SELECT wci.addparameter( 'precipitation amount', null, null, null, null, null, 'high estimate', 'kg/m2' );
+
 
 -- MetNo Wave Parameters
 select wci.addcfmethods('mean within days', 'Mean', 'mean' );
