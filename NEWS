@@ -1,11 +1,11 @@
-metno-wdb-metadata-1.1 (1.1.0~rc3-1) precise; urgency=low
+metno-wdb-metadata (1.1.0~rc3-1) precise; urgency=low
 
   * Added AROME data
   * Corrected package building
 
  -- Vegard Bønes <vegardb@vpn-117-201.met.no>  Thu, 15 Aug 2013 11:53:03 +0200
 
-metno-wdb-metadata-1.1 (1.1.0~rc2-1) precise; urgency=low
+metno-wdb-metadata (1.1.0~rc2-1) precise; urgency=low
 
   * Added namespace, dataproviders, and positions for the Vega system.
   * Added ecmwf 38r2 dataprovider.
