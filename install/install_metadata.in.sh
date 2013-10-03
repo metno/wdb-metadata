@@ -23,11 +23,13 @@
 
 version_number=__SCHEMA_VERSION__
 
-type -P __WDB_BINDIR__/wdbConfiguration &>/dev/null || { echo "ERROR: Could not find wdbConfiguration. Aborting." >&2; exit 1; }
+# Start Installation
+echo "---- metno wdb metadata installation ----"
+type __WDB_CONFIG__ &>/dev/null || { echo "ERROR: Could not find wdbConfiguration. Aborting." >&2; exit 1; }
 
-DEFAULT_DATABASE=`__WDB_BINDIR__/wdbConfiguration --database`@`__WDB_BINDIR__/wdbConfiguration --host`
-DEFAULT_USER=`__WDB_BINDIR__/wdbConfiguration --user`
-DEFAULT_PORT=`__WDB_BINDIR__/wdbConfiguration --port`
+DEFAULT_DATABASE=`__WDB_CONFIG__ --database`@`__WDB_CONFIG__ --host`
+DEFAULT_USER=`__WDB_CONFIG__ --user`
+DEFAULT_PORT=`__WDB_CONFIG__ --port`
 
 SCRIPT_VERSION=__WDB_VERSION__
 
@@ -143,9 +145,6 @@ fi
 if test -z "$WDB_INSTALL_PORT"; then
 	WDB_INSTALL_PORT=$DEFAULT_PORT
 fi
-
-# Start Installation
-echo "---- metno wdb metadata installation ----"
 
 # Directory for logging
 export LOGDIR=/tmp/$USER/metno-wdb-metadata/var/logs/

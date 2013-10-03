@@ -17,6 +17,8 @@ AM_LDFLAGS =			-L@builddir@
 
 LIBTOOL_VERSION_FLAG = 	-release $(VERSION)
 
+# Set only if no value
+wdb_CONFIG ?=@bindir@/wdbConfiguration
 
 # Compiler Settings
 SED_SUBSTITUTION = 		sed s:__WDB_VERSION__:$(VERSION):g $<\
@@ -36,6 +38,7 @@ SED_SUBSTITUTION = 		sed s:__WDB_VERSION__:$(VERSION):g $<\
 						| sed s:__SCHEMA_VERSION__:$(MIN_SCHEMA_VERSION):g \
 						| sed s:__WDB_DBNAME__:$(DATABASE_NAME):g \
 						| sed s:__WDB_DISTDIR__:$(PACKAGE)-$(VERSION):g \
+						| sed s:__WDB_CONFIG__:$(wdb_CONFIG):g \
 			 			> $@
 
 #						| sed s:__WDB_LIB__:wdb.so:g \
@@ -178,10 +181,10 @@ uninstall-local:
 	fi
 
 
-DISTCHECK_DATABASE_NAME = wdb_distcheck
+DISTCHECK_DATABASE_NAME = $(DATABASE_NAME)
 DISTCHECK_CONFIGURE_FLAGS = --enable-database-install --with-database-name=$(DISTCHECK_DATABASE_NAME)
 
-override distuninstallcheck_listfiles =  find . -type f -! -name metno-metadata.conf -print
+override distuninstallcheck_listfiles =  find . -type f -! -name wdb.conf -print
 
 distcheck-hook:
 	mkdir $(distdir)/_inst/etc/
