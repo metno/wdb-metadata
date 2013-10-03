@@ -18,7 +18,7 @@ AM_LDFLAGS =			-L@builddir@
 LIBTOOL_VERSION_FLAG = 	-release $(VERSION)
 
 # Set only if no value
-wdb_CONFIG ?=@bindir@/wdbConfiguration
+wdb_CONFIG ?= @bindir@/wdbConfiguration
 
 # Compiler Settings
 SED_SUBSTITUTION = 		sed s:__WDB_VERSION__:$(VERSION):g $<\
@@ -182,7 +182,7 @@ uninstall-local:
 
 
 DISTCHECK_DATABASE_NAME = $(DATABASE_NAME)
-DISTCHECK_CONFIGURE_FLAGS = --enable-database-install --with-database-name=$(DISTCHECK_DATABASE_NAME)
+DISTCHECK_CONFIGURE_FLAGS = --enable-database-install --with-database-name=$(DISTCHECK_DATABASE_NAME) $(WDB_DIST)
 
 override distuninstallcheck_listfiles =  find . -type f -! -name wdb.conf -print
 

@@ -37,6 +37,10 @@ AS_IF([test "$with_wdb" = check],
 	[AC_PATH_PROG([wdb_conf], [wdb-config], [no])],
 	[wdb_conf="$with_wdb/bin/wdb-config"])
 
+AS_IF([test "$with_wdb" = check], 
+	[], [AC_SUBST([WDB_DIST], [--with-wdb=$with_wdb])])
+	
+
 AS_IF([test "$wdb_conf" = no],
 	[AC_MSG_ERROR("Unable to find wdb - cannot proceed")]
 )
