@@ -4,7 +4,7 @@
 
 PKG_DIR = $(PACKAGE)-$(VERSION)
 DEBIAN_DIR = $(PKG_DIR)/debian
-DEBIAN_PACKAGE = `head -n1 $(top_srcdir)/NEWS | sed "s/ (/_/" | sed "s/\(.*\)-.*/\1/"`
+DEBIAN_PACKAGE = `head -n1 $(top_srcdir)/debian_files/changelog | sed "s/ (/_/" | sed "s/\(.*\)-.*/\1/"`
 DEBIAN_PACKAGE_NAME = *.deb
 DEBIAN_SOURCE_PACKAGE_NAME = *.dsc
 
@@ -16,7 +16,6 @@ prepare-debian:
 	rm -rf $(DEBIAN_DIR)
 	mkdir -p $(DEBIAN_DIR)
 	cp -r $(top_srcdir)/debian_files/* $(DEBIAN_DIR)
-	cp $(top_srcdir)/NEWS $(DEBIAN_DIR)/changelog
 	chmod 774 $(DEBIAN_DIR)/rules
 	if [ -e $(DEBIAN_DIR)/templates ]; then  debconf-updatepo --podir=$(DEBIAN_DIR)/po; fi
 

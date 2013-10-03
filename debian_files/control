@@ -1,7 +1,8 @@
 Source: metno-wdb-metadata
 Section: devel
 Priority: extra
-Maintainer: Michael Akinde <wdb@met.no>
+Maintainer: WDB Group, Meteorologisk institutt <wdb@met.no>
+Uploaders: Michael O. Akinde <michael.akinde@met.no>
 Build-Depends: debhelper (>= 7),
  cdbs,
  debconf,
