@@ -109,6 +109,7 @@ SELECT wci.adddataprovidertogroup( 'swan_karmoy500m', 'swan');
 SELECT wci.adddataprovider( 'ecmwf eps felt', 'computer system', 'grid', '1 day', 'Modified EC EPS data used in the PROFF system' );
 SELECT wci.adddataprovider( 'met.no eceps modification', 'computer system', 'grid', '1 day', 'Modified EC EPS data used in the PROFF system' );
 SELECT wci.adddataprovider( 'statkart.no', 'organization', 'grid', '1000 years', 'Statens Kartverk' );
+select wci.adddataprovider( 'norsk_polarinstitutt', 'organization', 'grid', '1000 years', 'Data from Norsk Polarinstitutt' );
 
 SELECT wci.adddataprovider( 'hpc forecast', 'computer system', 'grid', '1 day', 'National Weather Service Hydrometeorological Prediction Center Forecast' );
 
