@@ -130,7 +130,7 @@ Creating debian packages to update metadata
 In short:
 
 First time:
-> autoreconf
+> autoreconf -i
 > ./configure
 
 * Update configure.ac with a new version number under AC_INIT(...)
