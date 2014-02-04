@@ -3,10 +3,18 @@ SELECT wci.begin( 'wdb', 88, 88, 88 );
 
 --- AROME Data
 SELECT wci.adddataprovider( 'arome', 'data provider group', 'grid', '1 day', 'AROME data model' );
-SELECT wci.adddataprovider( 'arome_2500m', 'computer system', 'grid', '1 day', 'AROME 2.5km resolution model' );
+
+--- AROME Norway Data ---
+SELECT wci.adddataprovider( 'arome_2500m', 'computer system', 'grid', '1 day', 'AROME Norway 2.5km resolution model' );
 SELECT wci.adddataprovidertogroup( 'arome_2500m', 'arome');
-SELECT wci.adddataprovider( 'arome_2500m_temperature_corrected', 'computer system', 'grid', '1 day', 'AROME 2.5km resolution model' );
+SELECT wci.adddataprovider( 'arome_2500m_temperature_corrected', 'computer system', 'grid', '1 day', 'AROME Norway 2.5km resolution model' );
 SELECT wci.adddataprovidertogroup( 'arome_2500m_temperature_corrected', 'arome');
+
+--- AROME MetCoOp Data
+SELECT wci.adddataprovider( 'arome_metcoop_2500m', 'computer system', 'grid', '1 day', 'AROME MetCoOp 2.5km resolution model' );
+SELECT wci.adddataprovidertogroup( 'arome_metcoop_2500m', 'arome');
+SELECT wci.adddataprovider( 'arome_metcoop_2500m_temperature_corrected', 'computer system', 'grid', '1 day', 'AROME MetCoOp 2.5km resolution model' );
+SELECT wci.adddataprovidertogroup( 'arome_metcoop_2500m_temperature_corrected', 'arome');
 
 --- PROFF Data
 SELECT wci.adddataprovider( 'proff',   'data provider group', 'any', '1 day', 'Field data produced in the PROFF system' );
@@ -146,68 +154,68 @@ SELECT wci.adddataprovider( 'unified model 4km', 'computer system', 'grid', '1 d
 SELECT wci.adddataprovidertogroup( 'unified model 4km', 'unified model');
 
 -- VEGA Data (Interpolated Points from Fields)
-SELECT wci.adddataprovider( 'hirlam50km_interpolated', 'computer system', 'point','1 day', 'Hirlam point data generated on a 50km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovider( 'hirlam50km_interpolated', 'data provider group', 'point','1 day', 'Hirlam point data generated on a 50km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
 SELECT wci.adddataprovider( 'hirlam50km_interpolated_v0', 'computer system', 'point','1 day', 'Hirlam point data generated on a 50km grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
 SELECT wci.adddataprovidertogroup( 'hirlam50km_interpolated_v0', 'hirlam50km_interpolated');
 SELECT wci.adddataprovider( 'hirlam50km_interpolated_v1', 'computer system', 'point','1 day', 'Hirlam point data generated on a 50km grid, interpolated bilinearly using the WDB point from grid loading program, version 1.2.x.' );
 SELECT wci.adddataprovidertogroup( 'hirlam50km_interpolated_v1', 'hirlam50km_interpolated');
-SELECT wci.adddataprovider( 'hirlam20km_interpolated', 'computer system', 'point','1 day', 'Hirlam point data generated on a 20km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovider( 'hirlam20km_interpolated', 'data provider group', 'point','1 day', 'Hirlam point data generated on a 20km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
 SELECT wci.adddataprovider( 'hirlam20km_interpolated_v0', 'computer system', 'point','1 day', 'Hirlam point data generated on a 20km grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
 SELECT wci.adddataprovidertogroup( 'hirlam20km_interpolated_v0', 'hirlam20km_interpolated');
 SELECT wci.adddataprovider( 'hirlam20km_interpolated_v1', 'computer system', 'point','1 day', 'Hirlam point data generated on a 20km grid, interpolated bilinearly using the WDB point from grid loading program, version 1.2.x.' );
 SELECT wci.adddataprovidertogroup( 'hirlam20km_interpolated_v1', 'hirlam20km_interpolated');
-SELECT wci.adddataprovider( 'hirlam12km_interpolated', 'computer system', 'point','1 day', 'Hirlam point data generated on a 12km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovider( 'hirlam12km_interpolated', 'data provider group', 'point','1 day', 'Hirlam point data generated on a 12km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
 SELECT wci.adddataprovider( 'hirlam12km_interpolated_v0', 'computer system', 'point','1 day', 'Hirlam point data generated on a 12km grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
 SELECT wci.adddataprovidertogroup( 'hirlam12km_interpolated_v0', 'hirlam12km_interpolated');
 SELECT wci.adddataprovider( 'hirlam12km_interpolated_v1', 'computer system', 'point','1 day', 'Hirlam point data generated on a 12km grid, interpolated bilinearly using the WDB point from grid loading program, version 1.2.x.' );
 SELECT wci.adddataprovidertogroup( 'hirlam12km_interpolated_v1', 'hirlam12km_interpolated');
-SELECT wci.adddataprovider( 'hirlam10km_interpolated', 'computer system', 'point','1 day', 'Hirlam point data generated on a 10km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovider( 'hirlam10km_interpolated', 'data provider group', 'point','1 day', 'Hirlam point data generated on a 10km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
 SELECT wci.adddataprovider( 'hirlam10km_interpolated_v0', 'computer system', 'point','1 day', 'Hirlam point data generated on a 10km grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
 SELECT wci.adddataprovidertogroup( 'hirlam10km_interpolated_v0', 'hirlam10km_interpolated');
 SELECT wci.adddataprovider( 'hirlam10km_interpolated_v1', 'computer system', 'point','1 day', 'Hirlam point data generated on a 10km grid, interpolated bilinearly using the WDB point from grid loading program, version 1.2.x.' );
 SELECT wci.adddataprovidertogroup( 'hirlam10km_interpolated_v1', 'hirlam10km_interpolated');
-SELECT wci.adddataprovider( 'hirlam8km_interpolated', 'computer system', 'point','1 day', 'Hirlam point data generated on a 8km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovider( 'hirlam8km_interpolated', 'data provider group', 'point','1 day', 'Hirlam point data generated on a 8km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
 SELECT wci.adddataprovider( 'hirlam8km_interpolated_v0', 'computer system', 'point','1 day', 'Hirlam point data generated on a 8km grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
 SELECT wci.adddataprovidertogroup( 'hirlam8km_interpolated_v0', 'hirlam8km_interpolated');
 SELECT wci.adddataprovider( 'hirlam8km_interpolated_v1', 'computer system', 'point','1 day', 'Hirlam point data generated on a 8km grid, interpolated bilinearly using the WDB point from grid loading program, version 1.2.x.' );
 SELECT wci.adddataprovidertogroup( 'hirlam8km_interpolated_v1', 'hirlam8km_interpolated');
-SELECT wci.adddataprovider( 'hirlam4km_interpolated', 'computer system', 'point','1 day', 'Hirlam point data generated on a 4km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovider( 'hirlam4km_interpolated', 'data provider group', 'point','1 day', 'Hirlam point data generated on a 4km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
 SELECT wci.adddataprovider( 'hirlam4km_interpolated_v0', 'computer system', 'point','1 day', 'Hirlam point data generated on a 4km grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
 SELECT wci.adddataprovidertogroup( 'hirlam4km_interpolated_v0', 'hirlam4km_interpolated');
 SELECT wci.adddataprovider( 'hirlam4km_interpolated_v1', 'computer system', 'point','1 day', 'Hirlam point data generated on a 4km grid, interpolated bilinearly using the WDB point from grid loading program, version 1.2.x.' );
 SELECT wci.adddataprovidertogroup( 'hirlam4km_interpolated_v1', 'hirlam4km_interpolated');
 
-SELECT wci.adddataprovider( 'unified_model4km_interpolated', 'computer system', 'point','1 day', 'Unified model point data generated on a 4km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovider( 'unified_model4km_interpolated', 'data provider group', 'point','1 day', 'Unified model point data generated on a 4km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
 SELECT wci.adddataprovider( 'unified_model4km_interpolated_v0', 'computer system', 'point','1 day', 'Unified model point data generated on a 4km grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
 SELECT wci.adddataprovidertogroup( 'unified_model4km_interpolated_v0', 'unified_model4km_interpolated');
 SELECT wci.adddataprovider( 'unified_model4km_interpolated_v1', 'computer system', 'point','1 day', 'Unified model point data generated on a 4km grid, interpolated bilinearly using the WDB point from grid loading program, version 1.2.x.' );
 SELECT wci.adddataprovidertogroup( 'unified_model4km_interpolated_v1', 'unified_model4km_interpolated');
 
-SELECT wci.adddataprovider( 'uk_global_interpolated', 'computer system', 'point','1 day', 'UK MetOffice global model point data generated on a 4km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovider( 'uk_global_interpolated', 'data provider group', 'point','1 day', 'UK MetOffice global model point data generated on a 4km grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
 SELECT wci.adddataprovider( 'uk_global_interpolated_v0', 'computer system', 'point','1 day', 'UK MetOffice global model point data generated on a 4km grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
 SELECT wci.adddataprovidertogroup( 'uk_global_interpolated_v0', 'uk_global_interpolated');
 SELECT wci.adddataprovider( 'uk_global_interpolated_v1', 'computer system', 'point','1 day', 'UK MetOffice global model point data generated on a 4km grid, interpolated bilinearly using the WDB point from grid loading program, version 1.2.x.' );
 SELECT wci.adddataprovidertogroup( 'uk_global_interpolated_v1', 'uk_global_interpolated');
 
-SELECT wci.adddataprovider( 'ecmwf_interpolated', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 0.5 grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovider( 'ecmwf_interpolated', 'data provider group', 'point','1 day', 'ECMWF model point data generated on a 0.5 grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
 SELECT wci.adddataprovider( 'ecmwf_interpolated_v0', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 0.5 grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
 SELECT wci.adddataprovidertogroup( 'ecmwf_interpolated_v0', 'ecmwf_interpolated');
 
-SELECT wci.adddataprovider( 'ecmwf025_interpolated', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 0.25 grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovider( 'ecmwf025_interpolated', 'data provider group', 'point','1 day', 'ECMWF model point data generated on a 0.25 grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
 SELECT wci.adddataprovidertogroup( 'ecmwf025_interpolated', 'ecmwf_interpolated');
 SELECT wci.adddataprovider( 'ecmwf025_interpolated_v0', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 0.25 grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
 SELECT wci.adddataprovidertogroup( 'ecmwf025_interpolated_v0', 'ecmwf025_interpolated');
 SELECT wci.adddataprovider( 'ecmwf025_interpolated_v1', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 0.25 grid, interpolated bilinearly using the WDB point from grid loading program, version 1.2.x.' );
 SELECT wci.adddataprovidertogroup( 'ecmwf025_interpolated_v1', 'ecmwf025_interpolated');
 
-SELECT wci.adddataprovider( 'ecmwf05_interpolated', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 0.5 grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovider( 'ecmwf05_interpolated', 'data provider group', 'point','1 day', 'ECMWF model point data generated on a 0.5 grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
 SELECT wci.adddataprovidertogroup( 'ecmwf05_interpolated', 'ecmwf_interpolated');
 SELECT wci.adddataprovider( 'ecmwf05_interpolated_v0', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 0.5 grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
 SELECT wci.adddataprovidertogroup( 'ecmwf05_interpolated_v0', 'ecmwf05_interpolated');
 SELECT wci.adddataprovider( 'ecmwf05_interpolated_v1', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 0.5 grid, interpolated bilinearly using the WDB point from grid loading program, version 1.2.x.' );
 SELECT wci.adddataprovidertogroup( 'ecmwf05_interpolated_v1', 'ecmwf05_interpolated');
 
-SELECT wci.adddataprovider( 'ecmwf15_interpolated', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 1.5 grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
+SELECT wci.adddataprovider( 'ecmwf15_interpolated', 'data provider group', 'point','1 day', 'ECMWF model point data generated on a 1.5 grid, interpolated at the Norwegian Meteorological Institute. All interpolation versions.' );
 SELECT wci.adddataprovidertogroup( 'ecmwf15_interpolated', 'ecmwf_interpolated');
 SELECT wci.adddataprovider( 'ecmwf15_interpolated_v0', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 1.5 grid, interpolated using the miopdb loading programs operational at the time of loading (unknown interpolation).' );
 SELECT wci.adddataprovidertogroup( 'ecmwf15_interpolated_v0', 'ecmwf15_interpolated');

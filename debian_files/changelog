@@ -1,3 +1,10 @@
+metno-wdb-metadata (1.1.1~rc1-1) precise; urgency=low
+
+  * Added AROME MetCoOp data
+  * Edited description for AROME Norway data
+
+ -- Martin Pejcoch <martinp@.met.no>  Thu, 03 Sep 2013 14:00:00 +0200
+
 metno-wdb-metadata (1.1.0~rc3-2) precise; urgency=low
 
   * Added AROME data
