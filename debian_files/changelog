@@ -1,3 +1,9 @@
+metno-wdb-metadata (1.1.2-1) precise; urgency=low
+
+  * more metadata
+
+ -- Martin Pejcoch <martinp@.met.no>  Wed, 26 Mar 2014 15:29:55 +0100
+
 metno-wdb-metadata (1.1.1-1) precise; urgency=low
 
   * Added AROME MetCoOp data
