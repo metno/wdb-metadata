@@ -103,6 +103,10 @@ select wci.adddataprovider( 'met eceps large domain', 'computer system', 'grid',
 select wci.adddataprovidertogroup( 'met eceps large domain', 'met eceps forecast');
 select wci.adddataprovider( 'met eceps small domain', 'computer system', 'grid', '1 day', 'Probabilities calculated by the eps2probandltf program close-cropped norway' );
 select wci.adddataprovidertogroup( 'met eceps small domain', 'met eceps forecast');
+select wci.adddataprovider( 'met eceps large domain v.1.0', 'computer system', 'grid', '1 day', 'Probabilities calculated by version 1.0 of the eps2probandltf program big grid' );
+select wci.adddataprovidertogroup( 'met eceps large domain v.1.0', 'met eceps forecast');
+select wci.adddataprovider( 'met eceps small domain v.1.0', 'computer system', 'grid', '1 day', 'Probabilities calculated by version 1.0 of the eps2probandltf program close-cropped norway' );
+select wci.adddataprovidertogroup( 'met eceps small domain v.1.0', 'met eceps forecast');
 SELECT wci.adddataprovider( 'eps2probandltf', 'computer system', 'grid', '1 day', 'Probabilities calculated by the eps2probandltf program' );
 
 
