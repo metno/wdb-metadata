@@ -67,7 +67,8 @@ SELECT wci.adddataprovider( 'ecmwf atmospheric 38r1', 'computer system', 'grid',
 SELECT wci.adddataprovidertogroup( 'ecmwf atmospheric 38r1', 'ecmwf atmospheric');
 SELECT wci.adddataprovider( 'ecmwf atmospheric 38r2', 'computer system', 'grid', '1 day', 'ECMWF atmospheric development cycle 38r2' );
 SELECT wci.adddataprovidertogroup( 'ecmwf atmospheric 38r2', 'ecmwf atmospheric');
-
+select wci.adddataprovider( 'ecmwf atmospheric 40r1', 'computer system', 'grid', '1 day', 'ECMWF atmospheric development cycle 40r1' );
+select wci.adddataprovidertogroup( 'ecmwf atmospheric 40r1', 'ecmwf atmospheric');
 
 -- ECMWF Data (repackaged at met.no)
 SELECT wci.adddataprovider( 'ecmwf felt', 'data provider group', 'grid', '1 day', 'ECMWF fields packaged as FELT files' );
