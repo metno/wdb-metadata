@@ -1,3 +1,9 @@
+metno-wdb-metadata (1.1.3-1) precise; urgency=low
+
+  * more dataproviders
+
+ -- Martin Pejcoch <martinp@.met.no>  Mon, 31 Mar 2014 14:15:47 +0200
+
 metno-wdb-metadata (1.1.2-1) precise; urgency=low
 
   * more metadata
