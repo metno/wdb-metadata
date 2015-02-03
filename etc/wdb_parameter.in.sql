@@ -40,6 +40,11 @@ SELECT wci.addcfmethods('middle estimate', 'middle estimate', 'middle estimate o
 SELECT wci.addparameter( 'precipitation amount', null, null, null, null, null, 'middle estimate', 'kg/m2' );
 SELECT wci.addcfmethods('high estimate', 'higher estimate', 'high estimate of' );
 SELECT wci.addparameter( 'precipitation amount', null, null, null, null, null, 'high estimate', 'kg/m2' );
+SELECT wci.addparameter( 'cloud area fraction', null, null, null, null, null, '10th percentile', 'K' );
+SELECT wci.addparameter( 'cloud area fraction', null, null, null, null, null, '25th percentile', 'K' );
+SELECT wci.addparameter( 'cloud area fraction', null, null, null, null, null, '50th percentile', 'K' );
+SELECT wci.addparameter( 'cloud area fraction', null, null, null, null, null, '75th percentile', 'K' );
+SELECT wci.addparameter( 'cloud area fraction', null, null, null, null, null, '90th percentile', 'K' );
 
 
 -- MetNo Wave Parameters
