@@ -1,3 +1,9 @@
+metno-wdb-metadata (1.1.5-1) precise; urgency=low
+
+  * new version
+
+ -- Martin Pejcoch <martinp@.met.no>  Thu, 12 Feb 2015 13:35:28 +0100
+
 metno-wdb-metadata (1.1.4-1) precise; urgency=low
 
   * new version - with cloud percentiles
