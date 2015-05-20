@@ -45,6 +45,8 @@ SELECT wci.addparameter( 'cloud area fraction', null, null, null, null, null, '2
 SELECT wci.addparameter( 'cloud area fraction', null, null, null, null, null, '50th percentile', 'K' );
 SELECT wci.addparameter( 'cloud area fraction', null, null, null, null, null, '75th percentile', 'K' );
 SELECT wci.addparameter( 'cloud area fraction', null, null, null, null, null, '90th percentile', 'K' );
+SELECT wci.addparameter( 'wind speed of gust', null, null, null, null, null, null, 'm/s' );
+
 
 
 -- MetNo Wave Parameters
