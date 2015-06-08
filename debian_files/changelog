@@ -1,3 +1,10 @@
+metno-wdb-metadata (1.1.8-1) precise; urgency=low
+
+  * New dataprovider group ecmwf_atmospheric0125
+  * New dataprovider ecmwf_atmospheric0125_v41r1
+
+ -- Espen Myrland <espenm@.met.no>  Mon, 08 Jun 2015 15:07:12 +0200
+
 metno-wdb-metadata (1.1.7-1) precise; urgency=low
 
   * new wind data
