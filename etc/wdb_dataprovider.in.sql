@@ -90,7 +90,6 @@ SELECT wci.adddataprovidertogroup( 'ecmwf felt 106', 'ecmwf felt');
 
 -- Norwegian Forecast Data
 select wci.adddataprovider( 'hirlam norway', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
-select wci.adddataprovider( 'wam norway', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'pgen_probability', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'pgen_probability yr', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'pgen_percentile yr', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
@@ -103,7 +102,6 @@ select wci.adddataprovider( 'north sea skagen', 'computer system', 'grid', '1 da
 select wci.adddataprovider( 'barents', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'bodoloppa', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'oslo fjord', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
-select wci.adddataprovider( 'nordic', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'senorge', 'computer system', 'grid', '1000 years', 'Local norwegian field data' );
 select wci.adddataprovider( 'yr corrected', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'met eceps forecast', 'data provider group', 'grid', '1 day', 'Probabilities calculated by the eps2probandltf program' );
@@ -121,6 +119,22 @@ select wci.adddataprovider( 'met eceps small domain v.1.1', 'computer system', '
 select wci.adddataprovidertogroup( 'met eceps small domain v.1.1', 'met eceps forecast');
 SELECT wci.adddataprovider( 'eps2probandltf', 'computer system', 'grid', '1 day', 'Probabilities calculated by the eps2probandltf program' );
 
+-- WAM Norway data
+SELECT wci.adddataprovider( 'wam norway', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
+--SELECT wci.adddataprovider( 'wam norway', 'data provider group', 'grid', '1 day', 'Local norwegian field data' ); -- "wam norway" already exists, see previous line
+SELECT wci.adddataprovider( 'wam norway 50000m', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
+SELECT wci.adddataprovider( 'wam norway 10000m', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
+SELECT wci.adddataprovider( 'wam norway 4000m', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
+SELECT wci.adddataprovidertogroup( 'wam norway 50000m', 'wam norway' );
+SELECT wci.adddataprovidertogroup( 'wam norway 10000m', 'wam norway' );
+SELECT wci.adddataprovidertogroup( 'wam norway 4000m', 'wam norway' );
+
+-- Nordic ROMS data
+SELECT wci.adddataprovider( 'nordic', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
+SELECT wci.adddataprovider( 'nordic roms', 'data provider group', 'grid', '1 day', 'Local norwegian field data' );
+SELECT wci.adddataprovider( 'nordic roms 4000m', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
+SELECT wci.adddataprovidertogroup( 'nordic roms 4000m', 'nordic roms' );
+SELECT wci.adddataprovidertogroup( 'nordic roms 4000m', 'nordic' );
 
 -- Oceanic Data
 SELECT wci.adddataprovider( 'swan', 'data provider group', 'grid', '1 day', 'Local norwegian field data' );
