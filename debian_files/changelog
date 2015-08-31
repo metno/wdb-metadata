@@ -1,3 +1,9 @@
+metno-wdb-metadata (1.1.10-1) precise; urgency=low
+
+  * New data providers: mywave wam 4000m, norkyst roms 800m, arctic roms 20000m
+
+ -- Kim Tore Jensen <kimtj@met.no>  Mon, 31 Aug 2015 13:19:41 +0200
+
 metno-wdb-metadata (1.1.9-1) precise; urgency=low
 
   * New data providers: wam norway 50000m, wam norway 50000m, wam norway 50000m, nordic roms 4000m

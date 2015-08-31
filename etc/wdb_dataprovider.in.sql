@@ -95,7 +95,6 @@ select wci.adddataprovider( 'pgen_probability yr', 'computer system', 'grid', '1
 select wci.adddataprovider( 'pgen_percentile yr', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'trheimsleia', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'vestland', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
-select wci.adddataprovider( 'arctic', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'north sea', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'ss eps', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 select wci.adddataprovider( 'north sea skagen', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
@@ -129,12 +128,29 @@ SELECT wci.adddataprovidertogroup( 'wam norway 50000m', 'wam norway' );
 SELECT wci.adddataprovidertogroup( 'wam norway 10000m', 'wam norway' );
 SELECT wci.adddataprovidertogroup( 'wam norway 4000m', 'wam norway' );
 
+-- MyWave WAM data
+SELECT wci.adddataprovider( 'mywave wam', 'data provider group', 'grid', '1 day', 'Local Norwegian field data' );
+SELECT wci.adddataprovider( 'mywave wam 4000m', 'computer system', 'grid', '1 day', 'Local Norwegian field data' );
+SELECT wci.adddataprovidertogroup( 'mywave wam 4000m', 'mywave wam' );
+
 -- Nordic ROMS data
 SELECT wci.adddataprovider( 'nordic', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 SELECT wci.adddataprovider( 'nordic roms', 'data provider group', 'grid', '1 day', 'Local norwegian field data' );
 SELECT wci.adddataprovider( 'nordic roms 4000m', 'computer system', 'grid', '1 day', 'Local norwegian field data' );
 SELECT wci.adddataprovidertogroup( 'nordic roms 4000m', 'nordic roms' );
 SELECT wci.adddataprovidertogroup( 'nordic roms 4000m', 'nordic' );
+
+-- Norkyst ROMS data
+SELECT wci.adddataprovider( 'norkyst roms', 'data provider group', 'grid', '1 day', 'Local Norwegian field data' );
+SELECT wci.adddataprovider( 'norkyst roms 800m', 'computer system', 'grid', '1 day', 'Local Norwegian field data' );
+SELECT wci.adddataprovidertogroup( 'norkyst roms 800m', 'norkyst roms' );
+
+-- Arctic ROMS data
+SELECT wci.adddataprovider( 'arctic', 'data provider group', 'grid', '1 day', 'Local Norwegian field data' );
+SELECT wci.adddataprovider( 'arctic roms', 'data provider group', 'grid', '1 day', 'Local Norwegian field data' );
+SELECT wci.adddataprovider( 'arctic roms 20000m', 'computer system', 'grid', '1 day', 'Local Norwegian field data' );
+SELECT wci.adddataprovidertogroup( 'arctic roms', 'arctic' );
+SELECT wci.adddataprovidertogroup( 'arctic roms 20000m', 'arctic roms' );
 
 -- Oceanic Data
 SELECT wci.adddataprovider( 'swan', 'data provider group', 'grid', '1 day', 'Local norwegian field data' );
