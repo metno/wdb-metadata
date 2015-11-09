@@ -164,6 +164,7 @@ SELECT wci.adddataprovider( 'ecmwf eps felt', 'computer system', 'grid', '1 day'
 SELECT wci.adddataprovider( 'met.no eceps modification', 'computer system', 'grid', '1 day', 'Modified EC EPS data used in the PROFF system' );
 SELECT wci.adddataprovider( 'statkart.no', 'organization', 'grid', '1000 years', 'Statens Kartverk' );
 select wci.adddataprovider( 'norsk_polarinstitutt', 'organization', 'grid', '1000 years', 'Data from Norsk Polarinstitutt' );
+select wci.adddataprovider( 'global_terrain_2010', 'organization', 'grid', '1000 years', 'Global Multi-resolution Terrain Elevation Data 2010 (GMTED2010) from U.S. Geological Survey (USGS) and the National Geospatial-Intelligence Agency (NGA), http://topotools.cr.usgs.gov/gmted_viewer/');
 
 SELECT wci.adddataprovider( 'hpc forecast', 'computer system', 'grid', '1 day', 'National Weather Service Hydrometeorological Prediction Center Forecast' );
 
