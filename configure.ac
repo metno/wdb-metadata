@@ -8,7 +8,7 @@
 #-----------------------------------------------------------------------------
 
 AC_PREREQ(2.59)
-AC_INIT(metno-wdb-metadata, 1.1.10, [wdb@met.no])
+AC_INIT(metno-wdb-metadata, 1.2.0, [wdb@met.no])
 AC_SUBST( [MIN_SCHEMA_VERSION],["0"] )
 
 # Config
@@ -31,8 +31,8 @@ AC_PROG_MAKE_SET
 #-----------------------------------------------------------------------------
 
 # POSTGRES
-WDB_POSTGRES_CHECK(8.4.x)
-WDB_POSTGIS_CHECK(1.4.x)
+WDB_POSTGRES_CHECK(9.3.x)
+WDB_POSTGIS_CHECK(2.0.x)
 
 # DOCBOOK
 WDB_DOCBOOK_CHECK

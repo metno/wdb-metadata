@@ -30,39 +30,39 @@
 
 AC_DEFUN([WDB_PROJ_CHECK],
 [
-	# Set up option
-	AC_ARG_WITH([proj],
-				AS_HELP_STRING([--with-proj=PATH], [Specify the directory in which proj is installed (by default, configure uses the environment variable LDFLAGS). If set, configure will add PATH/include to CPPFLAGS and PATH/lib to LDFLAGS]),
-	    		[ac_proj_path="$withval"],
-            	[])
+    # Set up option
+    AC_ARG_WITH([proj],
+                AS_HELP_STRING([--with-proj=PATH], [Specify the directory in which proj is installed (by default, configure uses the environment variable LDFLAGS). If set, configure will add PATH/include to CPPFLAGS and PATH/lib to LDFLAGS]),
+                [ac_proj_path="$withval"],
+                [])
 
-	# Add path if given
-	if test "$ac_proj_path" != ""; then
+    # Add path if given
+    if test "$ac_proj_path" != ""; then
         PROJ_CPPFLAGS="-I$ac_proj_path/include"
-		PROJ_LDFLAGS="-L$ac_proj_path/lib"
-	fi
+        PROJ_LDFLAGS="-L$ac_proj_path/lib"
+    fi
 
-	# Set up environment
-	CPPFLAGS="$CPPFLAGS $PROJ_CPPFLAGS"
-	LDFLAGS="$LDFLAGS $PROJ_LDFLAGS"
+    # Set up environment
+    CPPFLAGS="$CPPFLAGS $PROJ_CPPFLAGS"
+    LDFLAGS="$LDFLAGS $PROJ_LDFLAGS"
 
-	# Check for header file
-	AC_CHECK_HEADER([proj_api.h],
-					,
-					[AC_MSG_ERROR([
+    # Check for header file
+    AC_CHECK_HEADER([proj_api.h],
+                    ,
+                    [AC_MSG_ERROR([
 -------------------------------------------------------------------------
-	Could not locate the proj_api.h header file. This indicates that
-	PROJ.4 may not be installed correclty on this server. WDB requires
-	PROJ.4 to perform cartographic reprojections.
+    Could not locate the proj_api.h header file. This indicates that
+    PROJ.4 may not be installed correclty on this server. WDB requires
+    PROJ.4 to perform cartographic reprojections.
 -------------------------------------------------------------------------
 ])
-					])
+                    ])
 
-	# Search for the Library
-	# automatically adds -lproj to the LIBS variable
-	AC_SEARCH_LIBS(pj_init_plus, 
-				   [proj],, 
-				   [AC_MSG_ERROR([
+    # Search for the Library
+    # automatically adds -lproj to the LIBS variable
+    AC_SEARCH_LIBS(pj_init_plus,
+                   [proj],,
+                   [AC_MSG_ERROR([
 -------------------------------------------------------------------------
     Unable to link with libproj. If the library is installed, make sure 
     -L(PROJ_PATH) is in your LDFLAGS, or specify the path in which proj 
@@ -71,6 +71,6 @@ AC_DEFUN([WDB_PROJ_CHECK],
     LDFLAGS: $LDFLAGS
 -------------------------------------------------------------------------
 ])]
-				   )
+                   )
 
 ])

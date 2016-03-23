@@ -31,15 +31,15 @@
 #
 AC_DEFUN([WDB_DATABASE_INSTALL],
 [
-	AC_ARG_ENABLE(database_install,
-     	AC_HELP_STRING( [--disable-database-install], [Do not install database as part of running make install (you may instead run make install-database, or install/install_database.sh after having run make install).] ),
-     			[case "${enableval}" in
-       				yes) database_install=true ;;
-       				no)  database_install=false ;;
-       				*) AC_MSG_ERROR(bad value ${enableval} for --enable-database-install) ;;
-     			 esac],
-     			 [database_install=true])
-	AC_SUBST( [DO_INSTALL_DATABASE], [$database_install] )
+    AC_ARG_ENABLE(database_install,
+         AC_HELP_STRING( [--disable-database-install], [Do not install database as part of running make install (you may instead run make install-database, or install/install_database.sh after having run make install).] ),
+                 [case "${enableval}" in
+                       yes) database_install=true ;;
+                       no)  database_install=false ;;
+                       *) AC_MSG_ERROR(bad value ${enableval} for --enable-database-install) ;;
+                  esac],
+                  [database_install=true])
+    AC_SUBST( [DO_INSTALL_DATABASE], [$database_install] )
 ])
 
 #
@@ -47,23 +47,23 @@ AC_DEFUN([WDB_DATABASE_INSTALL],
 #
 AC_DEFUN([WDB_DATABASE_NAME],
 [
-	AC_ARG_WITH([database_name],
-		  	    AS_HELP_STRING([--with-database-name=DBNAME], 
-	     					   [Specify the name of the database to be installed (default is wdb)]),
-	    		[database_name="$withval"],
-            	[database_name="wdb"])
-	AC_SUBST( [DATABASE_NAME], [$database_name] )
-	# Database Schema
-	version_major=`expr $PACKAGE_VERSION : '\([[0-9]]*\)'`
+    AC_ARG_WITH([database_name],
+                  AS_HELP_STRING([--with-database-name=DBNAME],
+                                [Specify the name of the database to be installed (default is wdb)]),
+                [database_name="$withval"],
+                [database_name="wdb"])
+    AC_SUBST( [DATABASE_NAME], [$database_name] )
+    # Database Schema
+    version_major=`expr $PACKAGE_VERSION : '\([[0-9]]*\)'`
     version_minor=`expr $PACKAGE_VERSION : '[[0-9]]*\.\([[0-9]]*\)'`
     version_micro=`expr $PACKAGE_VERSION : '[[0-9]]*\.[[0-9]]*\.\([[0-9]]*\)'`
-	database_version="${version_major}_${version_minor}_${version_micro}"
-	AC_SUBST( [DATABASE_SCHEMA], [$database_version] )
-	# Define Database Schemas
-	AC_DEFINE_UNQUOTED(WDB_SCHEMA,
-			  		   ["wdb_int"],
-			  		   [The default schema of WDB])
-	AC_DEFINE_UNQUOTED(WCI_SCHEMA,
-			  		   ["wci_int"],
-			  		   [The default schema of WCI])
+    database_version="${version_major}_${version_minor}_${version_micro}"
+    AC_SUBST( [DATABASE_SCHEMA], [$database_version] )
+    # Define Database Schemas
+    AC_DEFINE_UNQUOTED(WDB_SCHEMA,
+                         ["wdb_int"],
+                         [The default schema of WDB])
+    AC_DEFINE_UNQUOTED(WCI_SCHEMA,
+                         ["wci_int"],
+                         [The default schema of WCI])
 ])

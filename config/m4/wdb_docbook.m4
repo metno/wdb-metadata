@@ -32,9 +32,9 @@ AC_DEFUN([WDB_DOCBOOK_CHECK],
 [
 # Set up option
 AC_ARG_WITH([docbook],
-	     	AS_HELP_STRING([--with-docbook=DOCBOOK_PATH], 
-			[Specify the directory in which xmlto is installed (by default, configure checks your PATH). If an installation path is given using --with-docbook, configure will also check DOCBOOK_PATH/bin]),
-	    	[ac_docbook_path="$withval"],
+             AS_HELP_STRING([--with-docbook=DOCBOOK_PATH],
+            [Specify the directory in which xmlto is installed (by default, configure checks your PATH). If an installation path is given using --with-docbook, configure will also check DOCBOOK_PATH/bin]),
+            [ac_docbook_path="$withval"],
             [])
 
 # Add path if given
@@ -44,7 +44,7 @@ PATH="$ac_docbook_path/bin:$PATH"
 AC_PATH_PROG(DOCBOOK, xmlto, no, $PATH)
 
 if test "$DOCBOOK" = "no" ; then 
-	AC_MSG_WARN([
+    AC_MSG_WARN([
 -------------------------------------------------------------------------
     Unable to find xmlto. xmlto is required in order to build the WDB 
     documentation.

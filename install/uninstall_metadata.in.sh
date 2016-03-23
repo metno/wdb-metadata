@@ -48,37 +48,37 @@ Options:
 # Parse command line
 while test -n "$1"; do
     case $1 in
-	--database=*)
-	    WDB_INSTALL_DATABASE=`echo $1 | sed 's/--database=//'`
-	    shift
-	    continue;;
-	-d)
-	    shift
-	    WDB_INSTALL_DATABASE=$1
-	    shift
-	    continue;;
-	--user=*)
-	    WDB_INSTALL_USER=`echo $1 | sed 's/--user=//'`
-	    shift
-	    continue;;
-	-u)
-	    shift
-	    WDB_INSTALL_USER=$1
-	    shift
-	    continue;;
-	--port=*)
-	    WDB_INSTALL_PORT=`echo $1 | sed 's/--port=//'`
-	    shift
-	    continue;;
-	-p)
-	    shift
-	    WDB_INSTALL_PORT=$1
-	    shift
-	    continue;;
-	--help) 
-	    echo "$SCRIPT_USAGE"; exit 0;;
-	--version) 
-	    echo "$0 $SCRIPT_VERSION"; exit 0;;
+    --database=*)
+        WDB_INSTALL_DATABASE=`echo $1 | sed 's/--database=//'`
+        shift
+        continue;;
+    -d)
+        shift
+        WDB_INSTALL_DATABASE=$1
+        shift
+        continue;;
+    --user=*)
+        WDB_INSTALL_USER=`echo $1 | sed 's/--user=//'`
+        shift
+        continue;;
+    -u)
+        shift
+        WDB_INSTALL_USER=$1
+        shift
+        continue;;
+    --port=*)
+        WDB_INSTALL_PORT=`echo $1 | sed 's/--port=//'`
+        shift
+        continue;;
+    -p)
+        shift
+        WDB_INSTALL_PORT=$1
+        shift
+        continue;;
+    --help)
+        echo "$SCRIPT_USAGE"; exit 0;;
+    --version)
+        echo "$0 $SCRIPT_VERSION"; exit 0;;
     esac
 done
 
@@ -90,12 +90,12 @@ fi
 
 # DATABASE_USER
 if test -z "$WDB_INSTALL_USER"; then
-	WDB_INSTALL_USER=$DEFAULT_USER
+    WDB_INSTALL_USER=$DEFAULT_USER
 fi
 
 # DATABASE_PORT
 if test -z "$WDB_INSTALL_PORT"; then
-	WDB_INSTALL_PORT=$DEFAULT_PORT
+    WDB_INSTALL_PORT=$DEFAULT_PORT
 fi
 
 

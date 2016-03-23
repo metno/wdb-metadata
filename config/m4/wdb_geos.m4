@@ -32,9 +32,9 @@ AC_DEFUN([WDB_GEOS],
 [
 # Set up option
 AC_ARG_WITH([geos],
-	     	AS_HELP_STRING([--with-geos=GEOS_PATH], 
-			[Specify the directory in which geos is installed (by default, configure checks your PATH).]),
-	    	[ac_geos_path="$withval"],
+             AS_HELP_STRING([--with-geos=GEOS_PATH],
+            [Specify the directory in which geos is installed (by default, configure checks your PATH).]),
+            [ac_geos_path="$withval"],
             [])
 
 # Add path if given
@@ -45,7 +45,7 @@ AC_PATH_PROG(GEOS_CONFIG, geos-config, no, $PATH)
 
 if test "$GEOS_CONFIG" = "no" ; then
  
-	AC_MSG_ERROR([
+    AC_MSG_ERROR([
 -------------------------------------------------------------------------
     Unable to find geos. Geos is required in order to build the WDB 
     documentation.
@@ -63,10 +63,10 @@ AC_SUBST(geos_LIBS)
 AC_DEFUN([WDB_GEOS_C],
 [
 AC_ARG_WITH([geos],
-	     	AS_HELP_STRING([--with-geos_c=GEOS_PATH], 
-			[Specify the directory in which geos c interface is installed (by default, configure checks your PATH).]),
-	    	[LDFLAGS="-L$withval/lib $LDFLAGS"
-	    	CPPFLAGS="-I$withval/include $CPPFLAGS"])
+             AS_HELP_STRING([--with-geos_c=GEOS_PATH],
+            [Specify the directory in which geos c interface is installed (by default, configure checks your PATH).]),
+            [LDFLAGS="-L$withval/lib $LDFLAGS"
+            CPPFLAGS="-I$withval/include $CPPFLAGS"])
 
 AC_CHECK_HEADER([geos_c.h])
 AC_CHECK_LIB([geos_c], [GEOSGeom_getCoordSeq])

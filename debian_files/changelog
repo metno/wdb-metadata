@@ -1,3 +1,10 @@
+metno-wdb-metadata (1.2.0-1) precise; urgency=medium
+
+  * Upgraded WDB metadata for WDB version 1.6 
+  (Ubuntu Trusty, Postgresl 9.3 or better, Postgis 2.0 or better)
+
+ -- Michael Akinde <michaeloa@met.no>  Tue, 15 Mar 2016 13:00:00 +0200
+
 metno-wdb-metadata (1.1.10-1) precise; urgency=low
 
   * New data providers: mywave wam 4000m, norkyst roms 800m, arctic roms 20000m

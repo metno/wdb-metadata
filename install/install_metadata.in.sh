@@ -26,7 +26,7 @@ version_number=__SCHEMA_VERSION__
 # Start Installation
 echo "---- metno wdb metadata installation ----"
 type __WDB_CONFIG__ &>/dev/null || { echo "ERROR: Could not find wdbConfiguration. Aborting." >&2; exit 1; }
-
+type __WDB_BINDIR__/wdb &>/dev/null || { echo "ERROR: Could not find the wdb executable. Aborting." >&2; exit 1; }
 DEFAULT_DATABASE=`__WDB_CONFIG__ --database`@`__WDB_CONFIG__ --host`
 DEFAULT_USER=`__WDB_CONFIG__ --user`
 DEFAULT_PORT=`__WDB_CONFIG__ --port`
@@ -81,52 +81,52 @@ Options:
 # Parse command line
 while test -n "$1"; do
     case "$1" in
-	--database=*)
-	    WDB_INSTALL_DATABASE=`echo $1 | sed 's/--database=//'`
-	    shift
-	    continue;;
-	-d)
-	    shift
-	    WDB_INSTALL_DATABASE=$1
-	    shift
-	    continue;;
-	--user=*)
-	    WDB_INSTALL_USER=`echo $1 | sed 's/--user=//'`
-	    shift
-	    continue;;
-	-u)
-	    shift
-	    WDB_INSTALL_USER=$1
-	    shift
-	    continue;;
-	--port=*)
-	    WDB_INSTALL_PORT=`echo $1 | sed 's/--port=//'`
-	    shift
-	    continue;;
-	-p)
-	    shift
-	    WDB_INSTALL_PORT=$1
-	    shift
-	    continue;;
-	--force-install)
-	    WDB_OVERWRITE_DATABASE="yes"
-	    shift
-	    continue;;
-	-f)
-	    WDB_OVERWRITE_DATABASE="yes"
-	    shift
-	    continue;;
-	--with-postgis=*)
-	    WDB_POSTGIS_CONTRIB=`echo $1 | sed 's/--with-postgis=//'`
-	    shift
-	    continue;;
-	--help) 
-	    echo "$SCRIPT_USAGE"; exit 0;;
-	--version) 
-	    echo "$0 $SCRIPT_VERSION"; exit 0;;
-	*)
-	    shift
-	    continue;;
+    --database=*)
+        WDB_INSTALL_DATABASE=`echo $1 | sed 's/--database=//'`
+        shift
+        continue;;
+    -d)
+        shift
+        WDB_INSTALL_DATABASE=$1
+        shift
+        continue;;
+    --user=*)
+        WDB_INSTALL_USER=`echo $1 | sed 's/--user=//'`
+        shift
+        continue;;
+    -u)
+        shift
+        WDB_INSTALL_USER=$1
+        shift
+        continue;;
+    --port=*)
+        WDB_INSTALL_PORT=`echo $1 | sed 's/--port=//'`
+        shift
+        continue;;
+    -p)
+        shift
+        WDB_INSTALL_PORT=$1
+        shift
+        continue;;
+    --force-install)
+        WDB_OVERWRITE_DATABASE="yes"
+        shift
+        continue;;
+    -f)
+        WDB_OVERWRITE_DATABASE="yes"
+        shift
+        continue;;
+    --with-postgis=*)
+        WDB_POSTGIS_CONTRIB=`echo $1 | sed 's/--with-postgis=//'`
+        shift
+        continue;;
+    --help)
+        echo "$SCRIPT_USAGE"; exit 0;;
+    --version)
+        echo "$0 $SCRIPT_VERSION"; exit 0;;
+    *)
+        shift
+        continue;;
     esac
 done
 
@@ -138,12 +138,12 @@ fi
 
 # DATABASE_USER
 if test -z "$WDB_INSTALL_USER"; then
-	WDB_INSTALL_USER=$DEFAULT_USER
+    WDB_INSTALL_USER=$DEFAULT_USER
 fi
 
 # DATABASE_PORT
 if test -z "$WDB_INSTALL_PORT"; then
-	WDB_INSTALL_PORT=$DEFAULT_PORT
+    WDB_INSTALL_PORT=$DEFAULT_PORT
 fi
 
 # Directory for logging
@@ -164,10 +164,10 @@ WDB_DATAMODEL_PATH=__WDB_DATADIR__/sql
 WDB_METADATA_PATH=$WDB_DATAMODEL_PATH
 WDB_CLEANUP_PATH=$WDB_DATAMODEL_PATH
 if test ! -f $WDB_DATAMODEL_PATH/wdbMetadata.sql; then
-	echo "not found"
+    echo "not found"
     echo "Error: Could not locate metadata installation files."
-	echo "Checking: $WDB_DATAMODEL_PATH"
-	echo "Unable to install metno-wdb-metadata."
+    echo "Checking: $WDB_DATAMODEL_PATH"
+    echo "Unable to install metno-wdb-metadata."
     echo "Error: Could not locate metadata installation files. Unable to install wdb."
     exit 1
 fi
@@ -256,7 +256,7 @@ if [ 0 != $? ]; then
 else
     echo "done"
 fi
-	
+
 # Update Materialized View
 echo -n "updating materialized view base... "
 psql -U $WDB_INSTALL_USER -p $WDB_INSTALL_PORT -d $WDB_NAME -q <<EOF 
@@ -270,12 +270,12 @@ if [ 0 != $? ]; then
 else
     echo "done"
 fi
-	
+
 # Adding users
 echo -n "adding met.no user... "
-/usr/bin/wdb createuser locationforecastload WRITE
+__WDB_BINDIR__/wdb createuser locationforecastload WRITE
 echo "done"
-	
+
 
 echo "---- metno wdb metadata installation completed ----"
 exit 0

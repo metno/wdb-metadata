@@ -36,18 +36,18 @@ a prior correct invocation of wci.begin.
 Signatures:
 
 wci.addDataprovider(
-	dataprovidername_ text, -- Name of dataorvider
-	dataprovidertype_ text, -- "data provider group", "computer system" or "wci user"
-	domaindelivery_ text,  -- "any", "grid" or "point"
-	lifecycle_ interval, -- deprecated - should normally be "1 day"
-	dataprovidercomment_ text -- Any comments, for documentation purposes
+    dataprovidername_ text, -- Name of dataorvider
+    dataprovidertype_ text, -- "data provider group", "computer system" or "wci user"
+    domaindelivery_ text,  -- "any", "grid" or "point"
+    lifecycle_ interval, -- deprecated - should normally be "1 day"
+    dataprovidercomment_ text -- Any comments, for documentation purposes
 )
 
 addDataprovider adds or updates a dataprovider.
 
 wci.addDataproviderToGroup(
-	dataprovidername_ text, -- provider to add
-	dataprovidergroup_ text -- group to add provider to
+    dataprovidername_ text, -- provider to add
+    dataprovidergroup_ text -- group to add provider to
 )
 
 a dataprovider group is just a dataprovider, with
@@ -80,10 +80,10 @@ metadata if you wish.
 Signature:
 
 wci.addorupdateplacepoint(
-	placename_ text, -- name of the point, in the current namespace, as set by wci.begin
-	placegeometry_ geometry,  -- WKT definition of the point (for example "POINT(11 59)")
-	placevalidfrom_ timestamp with time zone, -- The name is valid from this time
-	placevalidto_ timestamp with time zone -- after this time, the name is invalid.
+    placename_ text, -- name of the point, in the current namespace, as set by wci.begin
+    placegeometry_ geometry,  -- WKT definition of the point (for example "POINT(11 59)")
+    placevalidfrom_ timestamp with time zone, -- The name is valid from this time
+    placevalidto_ timestamp with time zone -- after this time, the name is invalid.
 )
 
 
@@ -95,8 +95,8 @@ Information about a projection used in the database.
 Signature:
 
 wci.addsrid(
-	authname_ text, -- A description of who may use this projection
-	projection_ text -- the proj4 definition of the projection
+    authname_ text, -- A description of who may use this projection
+    projection_ text -- the proj4 definition of the projection
 )
 
 
@@ -112,14 +112,14 @@ loading program is buggy, you must add this to the metadata.
 Signature:
 
 wci.addplaceregulargrid(
-	placename_ text, -- name of the grid
-	numx_ integer, -- number of points in the x direction
-	numy_ integer, -- number of points in the y direction
-	incx_ double precision, -- distance between points in the projection's units, in the x direction
-	incy_ double precision,  -- distance between points in the projection's units, in the x direction
-	startx_ double precision, -- starting x coordinate, in projection's units
-	starty_ double precision, -- starting y coordinate, in projection's units
-	projection_ text -- proj4 definition. This must have been added in wdb_spatial_ref_sys.in.sql before usage here
+    placename_ text, -- name of the grid
+    numx_ integer, -- number of points in the x direction
+    numy_ integer, -- number of points in the y direction
+    incx_ double precision, -- distance between points in the projection's units, in the x direction
+    incy_ double precision,  -- distance between points in the projection's units, in the x direction
+    startx_ double precision, -- starting x coordinate, in projection's units
+    starty_ double precision, -- starting y coordinate, in projection's units
+    projection_ text -- proj4 definition. This must have been added in wdb_spatial_ref_sys.in.sql before usage here
 )
 
 

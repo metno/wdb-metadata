@@ -6,6 +6,7 @@
 /compile
 /build
 /Makefile.in
+/test-driver
 /.project
 .autotools
 .cproject

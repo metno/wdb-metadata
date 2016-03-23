@@ -24,12 +24,12 @@ db_get wdb/metadata_admin && DB_USER="$RET"
 
 case "$1" in
     configure)
-		# Run install script
-		su $DB_USER -c "/usr/lib/metno-wdb-metadata/install_metadata -d $DB_NAME -u $DB_USER"
+        # Run install script
+        su $DB_USER -c "/usr/lib/metno-wdb-metadata/install_metadata -d $DB_NAME -u $DB_USER"
     ;;
 
     abort-upgrade)
-    	# success: We have successfully aborted an upgrade
+        # success: We have successfully aborted an upgrade
     ;;
     abort-remove|abort-deconfigure)
     ;;

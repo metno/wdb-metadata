@@ -1,5 +1,5 @@
 #
-# Copyright © 2008 Ville Laurikari <vl@iki.fi>
+# Copyright (c) 2008 Ville Laurikari <vl@iki.fi>
 #
 # Copying and distribution of this file, with or without modification, are 
 # permitted in any medium without royalty provided the copyright notice and 
@@ -48,7 +48,7 @@ AC_DEFUN([VL_LIB_READLINE], [
       AC_CHECK_HEADERS(history.h readline/history.h)
     fi
   else
-		AC_MSG_ERROR([
+        AC_MSG_ERROR([
 -------------------------------------------------------------------------
     Could not find the GNU readline library. GNU readline is required for
     the compilation of the WDB administration tools.
