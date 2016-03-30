@@ -14,7 +14,7 @@ Build-Depends: debhelper (>= 7),
  xmlto
 Standards-Version: 3.9.5
 
-Package: metno-wdb-metadata-1.2
+Package: metno-wdb-metadata-1.6
 Architecture: any
 Depends: ${misc:Depends},
  postgresql-client,

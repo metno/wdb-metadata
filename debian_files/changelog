@@ -1,9 +1,11 @@
-metno-wdb-metadata (1.2.0-1) precise; urgency=medium
+metno-wdb-metadata (1.6.0-1) precise; urgency=medium
 
   * Upgraded WDB metadata for WDB version 1.6 
   (Ubuntu Trusty, Postgresl 9.3 or better, Postgis 2.0 or better)
+  * Bumped the version number, due to inconsistencies (different data in
+  changelog and git repositories).
 
- -- Michael Akinde <michaeloa@met.no>  Tue, 15 Mar 2016 13:00:00 +0200
+ -- Michael Akinde <michaeloa@met.no>  Wed, 30 Mar 2016 15:00:00 +0200
 
 metno-wdb-metadata (1.1.10-1) precise; urgency=low
 
