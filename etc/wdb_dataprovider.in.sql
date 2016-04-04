@@ -268,3 +268,6 @@ SELECT wci.adddataprovider( 'ecmwf15_interpolated_v0', 'computer system', 'point
 SELECT wci.adddataprovidertogroup( 'ecmwf15_interpolated_v0', 'ecmwf15_interpolated');
 SELECT wci.adddataprovider( 'ecmwf15_interpolated_v1', 'computer system', 'point','1 day', 'ECMWF model point data generated on a 1.5 grid, interpolated bilinearly using the WDB point from grid loading program, version 1.2.x.' );
 SELECT wci.adddataprovidertogroup( 'ecmwf15_interpolated_v1', 'ecmwf15_interpolated');
+
+-- Nowcasting data
+SELECT wci.adddataprovider( 'nowcast', 'computer system', 'point','30 minutes', 'Very short-term weather forecast' );
