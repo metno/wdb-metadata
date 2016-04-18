@@ -1,3 +1,10 @@
+metno-wdb-metadata (1.2.0-1) precise; urgency=low
+
+  * Branched wdb-metadata to backport dataproviders from trusty version to precise.
+  * New data providers: nowcast
+
+ -- Michael Akinde <michaeloa@met.no>  Mon, 18 Apr 2016 10:16:00 +0200
+
 metno-wdb-metadata (1.1.10-1) precise; urgency=low
 
   * New data providers: mywave wam 4000m, norkyst roms 800m, arctic roms 20000m
