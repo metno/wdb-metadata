@@ -131,7 +131,9 @@ SELECT wci.adddataprovidertogroup( 'wam norway 4000m', 'wam norway' );
 -- MyWave WAM data
 SELECT wci.adddataprovider( 'mywave wam', 'data provider group', 'grid', '1 day', 'Local Norwegian field data' );
 SELECT wci.adddataprovider( 'mywave wam 4000m', 'computer system', 'grid', '1 day', 'Local Norwegian field data' );
+SELECT wci.adddataprovider( 'mywave wam 800m', 'computer system', 'grid', '1 day', 'Local Norwegian field data' );
 SELECT wci.adddataprovidertogroup( 'mywave wam 4000m', 'mywave wam' );
+SELECT wci.adddataprovidertogroup( 'mywave wam 800m', 'mywave wam' );
 
 -- Nordic ROMS data
 SELECT wci.adddataprovider( 'nordic', 'computer system', 'grid', '1 day', 'Local norwegian field data' );

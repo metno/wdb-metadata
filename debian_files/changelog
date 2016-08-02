@@ -1,3 +1,10 @@
+metno-wdb-metadata (1.2.1-1) precise; urgency=low
+
+  * New dataprovider mywave wam 800m. Added to group mywave wam.
+  * Increased dataset lifetime from 1 day to 2 days for met eceps small/large domain v.1.1.
+
+ -- Haavard Futsaeter <havardf@met.no>  Tue, 02 Aug 2016 10:53:00 +0200
+
 metno-wdb-metadata (1.2.0-1) precise; urgency=low
 
   * Branched wdb-metadata to backport dataproviders from trusty version to precise.
