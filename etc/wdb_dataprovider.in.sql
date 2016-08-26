@@ -16,6 +16,10 @@ SELECT wci.adddataprovidertogroup( 'arome_metcoop_2500m', 'arome');
 SELECT wci.adddataprovider( 'arome_metcoop_2500m_temperature_corrected', 'computer system', 'grid', '1 day', 'AROME MetCoOp 2.5km resolution model' );
 SELECT wci.adddataprovidertogroup( 'arome_metcoop_2500m_temperature_corrected', 'arome');
 
+--- AROME Arctic
+SELECT wci.adddataprovider( 'arome_arctic_2500m', 'computer system', 'grid', '1 day', 'AROME Arctic 2.5km resolution model' );
+SELECT wci.adddataprovidertogroup( 'arome_arctic_2500m', 'arome');
+
 --- PROFF Data
 SELECT wci.adddataprovider( 'proff',   'data provider group', 'any', '1 day', 'Field data produced in the PROFF system' );
 SELECT wci.adddataprovider( 'proff.raw', 'computer system', 'grid', '1 day', 'proff.raw' );
