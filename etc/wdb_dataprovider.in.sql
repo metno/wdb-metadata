@@ -16,6 +16,15 @@ SELECT wci.adddataprovidertogroup( 'arome_metcoop_2500m', 'arome');
 SELECT wci.adddataprovider( 'arome_metcoop_2500m_temperature_corrected', 'computer system', 'grid', '1 day', 'AROME MetCoOp 2.5km resolution model' );
 SELECT wci.adddataprovidertogroup( 'arome_metcoop_2500m_temperature_corrected', 'arome');
 
+--- AROME Arctic
+SELECT wci.adddataprovider( 'arome_arctic_2500m', 'computer system', 'grid', '1 day', 'AROME Arctic 2.5km resolution model' );
+SELECT wci.adddataprovidertogroup( 'arome_arctic_2500m', 'arome');
+
+--- MetCoOp EPS
+SELECT wci.adddataprovider( 'metcoop_eps_control_2500m', 'computer system', 'grid', '1 day', 'MetCoOp EPS Control 2.5km resolution model' );
+SELECT wci.adddataprovider( 'metcoop_eps_control_temperature_corrected_2500m', 'computer system', 'grid', '1 day', 'MetCoOp EPS Control Temperature Corrected 2.5km model' );
+
+
 --- PROFF Data
 SELECT wci.adddataprovider( 'proff',   'data provider group', 'any', '1 day', 'Field data produced in the PROFF system' );
 SELECT wci.adddataprovider( 'proff.raw', 'computer system', 'grid', '1 day', 'proff.raw' );
@@ -76,6 +85,9 @@ select wci.adddataprovidertogroup( 'ecmwf atmospheric 41r1', 'ecmwf atmospheric'
 SELECT wci.adddataprovider( 'ecmwf_atmospheric0125', 'data provider group', 'grid', '1 day', 'The ECMWF atmospheric' );
 SELECT wci.adddataprovider( 'ecmwf_atmospheric0125_v41r1', 'computer system', 'grid', '1 day', 'ECMWF atmospheric development cycle 41r1' );
 SELECT wci.adddataprovidertogroup( 'ecmwf_atmospheric0125_v41r1', 'ecmwf_atmospheric0125');
+
+--- ECMWF Data 0.125 hourly timesteps
+SELECT wci.adddataprovider( 'ecmwf_atmospheric0125_hourly', 'computer system', 'grid', '1 day', 'ECMWF atmospheric hourly' );
 
 -- ECMWF Data (repackaged at met.no)
 SELECT wci.adddataprovider( 'ecmwf felt', 'data provider group', 'grid', '1 day', 'ECMWF fields packaged as FELT files' );
