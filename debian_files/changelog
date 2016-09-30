@@ -1,3 +1,9 @@
+metno-wdb-metadata (1.2.3-1) precise; urgency=low
+
+  * Added dataproviders ecmwf hourly, meps and arome artic.
+
+ -- Haavard Futsaeter <havardf@met.no>  Fri, 30 Sep 2016 06:48:11 +0000
+
 metno-wdb-metadata (1.2.2-1) precise; urgency=low
 
   * package changes
