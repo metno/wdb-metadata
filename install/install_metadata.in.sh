@@ -233,7 +233,7 @@ fi
 
 # Check version of database schema
 echo -n "current schema version of WDB... "
-current_version=`psql -U $WDB_INSTALL_USER -p $WDB_INSTALL_PORT -d $WDB_NAME -l -c "select max(packageversion) from wci.configuration() where name ='WDB';" -q | sed -e '1,2d' | sed -e '2,$d' | sed 's/^[ ]//g'`
+current_version=`psql -U $WDB_INSTALL_USER -p $WDB_INSTALL_PORT -d $WDB_NAME  -c "select max(packageversion) from wci.configuration() where name ='WDB';" -q | sed -e '1,2d' | sed -e '2,$d' | sed 's/^[ ]//g'`
 echo $current_version
 
 if [ $current_version -lt $version_number ]
