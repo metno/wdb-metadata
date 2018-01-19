@@ -1,3 +1,9 @@
+metno-wdb-metadata (1.6.2-1) UNRELEASED; urgency=medium
+
+  * new version
+
+ -- Michael Akinde <michaeloa@met.no>  Fri, 19 Jan 2018 12:10:44 +0100
+
 metno-wdb-metadata (1.6.0-1) precise; urgency=medium
 
   * Upgraded WDB metadata for WDB version 1.6 
